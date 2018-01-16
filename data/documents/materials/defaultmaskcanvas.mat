@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<material name = "Default Mask Canvas">
+<materialdata>
+	<cull value ="none" />
+	<depthwrite value = "no"/>
+	<depthtest value="lequal"/>
+	<blend value = "alpha"/>
+	<shaders file="defaultmaskcanvas"/>
+</materialdata>
+
+</material>

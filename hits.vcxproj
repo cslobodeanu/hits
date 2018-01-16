@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9348D5C3-71E4-4755-AC6B-03FF63051476}</ProjectGuid>
+    <RootNamespace>hits</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>src/morgana/base/binpacker;src/morgana/standard;src/morgana/fmk/application;src/morgana/fmk/scene/effects;src/morgana/fmk/utils;src/morgana/fmk/scene/cameras;src/morgana/fmk/scene;src/morgana/fmk;src/morgana/fmk/renderers;src/morgana/fmk/gameobjects;src/morgana/fmk/widgets;src/morgana/fmk/scene/lights;src/morgana/fmk/resources;src/morgana/base/clock;src/morgana/external;src/morgana/base/parsers;src/morgana/base/utils;src/morgana/base/callbacks;src/morgana/base/types;src/morgana/base/io;src/morgana/base/reflection;src/morgana/base/devices;src/morgana/base/devices/display;src/morgana/base;src/morgana/base/math;src/morgana/base/memory;src/morgana/platform/win32/include;src/morgana/platform/win32;src/morgana/external/fbxsdk/include;src/morgana/external/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>_CRT_NO_VA_START_VALIDATION;_MBCS;%(PreprocessorDefinitions); MORGANA_SHELL;_DEBUG;DEBUG</PreprocessorDefinitions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>src/morgana/external/fbxsdk/lib/x86/debug;src/morgana/external/freetype/lib;src/morgana/platform/win32/lib</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <Profile>true</Profile>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);libfbxsdk-mt.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>src/morgana/base/binpacker;src/morgana/standard;src/morgana/fmk/application;src/morgana/fmk/scene/effects;src/morgana/fmk/utils;src/morgana/fmk/scene/cameras;src/morgana/fmk/scene;src/morgana/fmk;src/morgana/fmk/renderers;src/morgana/fmk/gameobjects;src/morgana/fmk/widgets;src/morgana/fmk/scene/lights;src/morgana/fmk/resources;src/morgana/base/clock;src/morgana/external;src/morgana/base/parsers;src/morgana/base/utils;src/morgana/base/callbacks;src/morgana/base/types;src/morgana/base/io;src/morgana/base/reflection;src/morgana/base/devices;src/morgana/base/devices/display;src/morgana/base;src/morgana/base/math;src/morgana/base/memory;src/morgana/platform/win32/include;src/morgana/platform/win32;src/morgana/external/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);MORGANA_SHELL</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>src/morgana/external/freetype/lib;src/morgana/platform/win32/lib</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="src\morgana\base\base.h" />
+    <ClInclude Include="src\morgana\base\binpacker\binpacker.h" />
+    <ClInclude Include="src\morgana\base\binpacker\GuillotineBinPack.h" />
+    <ClInclude Include="src\morgana\base\binpacker\MaxRectsBinPack.h" />
+    <ClInclude Include="src\morgana\base\binpacker\BinPackerRect.h" />
+    <ClInclude Include="src\morgana\base\binpacker\ShelfBinPack.h" />
+    <ClInclude Include="src\morgana\base\binpacker\SkylineBinPack.h" />
+    <ClInclude Include="src\morgana\base\clock\datetime.h" />
+    <ClInclude Include="src\morgana\base\clock\meclock.h" />
+    <ClInclude Include="src\morgana\base\clock\metimer.h" />
+    <ClInclude Include="src\morgana\base\compatibility\compatibility.h" />
+    <ClInclude Include="src\morgana\base\devices\devices.h" />
+    <ClInclude Include="src\morgana\base\devices\display\dispcmd.h" />
+    <ClInclude Include="src\morgana\base\devices\display\displaydevice.h" />
+    <ClInclude Include="src\morgana\base\devices\display\medisplay.h" />
+    <ClInclude Include="src\morgana\base\devices\display\objects\buffer.h" />
+    <ClInclude Include="src\morgana\base\devices\display\objects\rendertarget.h" />
+    <ClInclude Include="src\morgana\base\devices\display\objects\shaderprogram.h" />
+    <ClInclude Include="src\morgana\base\devices\display\objects\sprite.h" />
+    <ClInclude Include="src\morgana\base\devices\display\objects\texture.h" />
+    <ClInclude Include="src\morgana\base\devices\display\opengl\shaderparser_glsl.h" />
+    <ClInclude Include="src\morgana\base\devices\display\pipelinestates.h" />
+    <ClInclude Include="src\morgana\base\devices\display\rendepipelinedefs.h" />
+    <ClInclude Include="src\morgana\base\devices\display\displayobject.h" />
+    <ClInclude Include="src\morgana\base\devices\display\displayobjectfactory.h" />
+    <ClInclude Include="src\morgana\base\devices\display\opengl\common_ogl_device.h" />
+    <ClInclude Include="src\morgana\base\devices\display\opengl\displayobjectfactory_ogl.h" />
+    <ClInclude Include="src\morgana\base\devices\display\opengl\oglheaders.h" />
+    <ClInclude Include="src\morgana\base\devices\display\opengl\common_oglw32_device.h" />
+    <ClInclude Include="src\morgana\base\math\box.h" />
+    <ClInclude Include="src\morgana\base\math\curve.h" />
+    <ClInclude Include="src\morgana\base\math\frustum.h" />
+    <ClInclude Include="src\morgana\base\math\intersection.h" />
+    <ClInclude Include="src\morgana\base\math\mathutils.h" />
+    <ClInclude Include="src\morgana\base\math\sphere.h" />
+    <ClInclude Include="src\morgana\base\math\spline.h" />
+    <ClInclude Include="src\morgana\base\memory\managed\cpumemorypage.h" />
+    <ClInclude Include="src\morgana\base\memory\managed\managedpages.h" />
+    <ClInclude Include="src\morgana\base\memory\managed\memorypage.h" />
+    <ClInclude Include="src\morgana\base\parsers\bp.h" />
+    <ClInclude Include="src\morgana\base\parsers\cbp.h" />
+    <ClInclude Include="src\morgana\base\parsers\medocument.h" />
+    <ClInclude Include="src\morgana\base\parsers\meparsers.h" />
+    <ClInclude Include="src\morgana\base\parsers\sbp.h" />
+    <ClInclude Include="src\morgana\base\parsers\xml\tinyxml2.h" />
+    <ClInclude Include="src\morgana\base\reflection\callbacks.h" />
+    <ClInclude Include="src\morgana\base\reflection\classes_macros.h" />
+    <ClInclude Include="src\morgana\base\reflection\meclasslib.h" />
+    <ClInclude Include="src\morgana\base\reflection\objectptrref.h" />
+    <ClInclude Include="src\morgana\base\reflection\properties\objectproperties.h" />
+    <ClInclude Include="src\morgana\base\reflection\reflection.h" />
+    <ClInclude Include="src\morgana\base\reflection\meobject.h" />
+    <ClInclude Include="src\morgana\base\reflection\properties\properties.h" />
+    <ClInclude Include="src\morgana\base\reflection\properties\propertiesimpl.h" />
+    <ClInclude Include="src\morgana\base\reflection\serializer\serializer_base.h" />
+    <ClInclude Include="src\morgana\base\reflection\serializer\serializer_binary.h" />
+    <ClInclude Include="src\morgana\base\reflection\serializer\serializer_text.h" />
+    <ClInclude Include="src\morgana\base\reflection\serializer\serializer_xml.h" />
+    <ClInclude Include="src\morgana\base\reflection\singleton.h" />
+    <ClInclude Include="src\morgana\base\devices\display\vertexdef.h" />
+    <ClInclude Include="src\morgana\base\devices\input\inputdevice.h" />
+    <ClInclude Include="src\morgana\base\devices\input\kbdef.h" />
+    <ClInclude Include="src\morgana\base\devices\input\keyboardw32.h" />
+    <ClInclude Include="src\morgana\base\devices\input\mousedef.h" />
+    <ClInclude Include="src\morgana\base\devices\input\mousew32.h" />
+    <ClInclude Include="src\morgana\base\devices\medevice.h" />
+    <ClInclude Include="src\morgana\base\devices\medevices.h" />
+    <ClInclude Include="src\morgana\base\devices\sound\sounddevice.h" />
+    <ClInclude Include="src\morgana\base\io\cfs.h" />
+    <ClInclude Include="src\morgana\base\io\debug.h" />
+    <ClInclude Include="src\morgana\base\io\dfs.h" />
+    <ClInclude Include="src\morgana\base\io\fsa.h" />
+    <ClInclude Include="src\morgana\base\io\meio.h" />
+    <ClInclude Include="src\morgana\base\io\mefiles.h" />
+    <ClInclude Include="src\morgana\base\io\mfs.h" />
+    <ClInclude Include="src\morgana\base\io\nfs.h" />
+    <ClInclude Include="src\morgana\base\io\paths.h" />
+    <ClInclude Include="src\morgana\base\io\rfs.h" />
+    <ClInclude Include="src\morgana\base\io\stream.h" />
+    <ClInclude Include="src\morgana\base\math\matrix.h" />
+    <ClInclude Include="src\morgana\base\math\memath.h" />
+    <ClInclude Include="src\morgana\base\math\plane.h" />
+    <ClInclude Include="src\morgana\base\math\quaternion.h" />
+    <ClInclude Include="src\morgana\base\math\vector2.h" />
+    <ClInclude Include="src\morgana\base\math\vector3.h" />
+    <ClInclude Include="src\morgana\base\math\vector4.h" />
+    <ClInclude Include="src\morgana\base\memory\localmemoryblock.h" />
+    <ClInclude Include="src\morgana\base\memory\macros.h" />
+    <ClInclude Include="src\morgana\base\memory\memtracker.h" />
+    <ClInclude Include="src\morgana\base\memory\mememory.h" />
+    <ClInclude Include="src\morgana\base\memory\operators.h" />
+    <ClInclude Include="src\morgana\base\clock\mesystemclock.h" />
+    <ClInclude Include="src\morgana\base\stats\framestats.h" />
+    <ClInclude Include="src\morgana\base\types\bits.h" />
+    <ClInclude Include="src\morgana\base\types\color255.h" />
+    <ClInclude Include="src\morgana\base\types\color.h" />
+    <ClInclude Include="src\morgana\base\types\colorhsb.h" />
+    <ClInclude Include="src\morgana\base\types\stringbuilder.h" />
+    <ClInclude Include="src\morgana\base\types\treeleaf.h" />
+    <ClInclude Include="src\morgana\base\types\namedmask.h" />
+    <ClInclude Include="src\morgana\base\types\mearray.h" />
+    <ClInclude Include="src\morgana\base\types\medictionary.h" />
+    <ClInclude Include="src\morgana\base\types\mepool.h" />
+    <ClInclude Include="src\morgana\base\types\mestring.h" />
+    <ClInclude Include="src\morgana\base\types\mestringhash.h" />
+    <ClInclude Include="src\morgana\base\types\metreenode.h" />
+    <ClInclude Include="src\morgana\base\types\metypes.h" />
+    <ClInclude Include="src\morgana\base\types\named.h" />
+    <ClInclude Include="src\morgana\base\types\point.h" />
+    <ClInclude Include="src\morgana\base\types\rect.h" />
+    <ClInclude Include="src\morgana\base\types\sharedptr.h" />
+    <ClInclude Include="src\morgana\base\types\smartptr.h" />
+    <ClInclude Include="src\morgana\base\types\tagged.h" />
+    <ClInclude Include="src\morgana\base\types\usagearray.h" />
+    <ClInclude Include="src\morgana\base\types\uuid.h" />
+    <ClInclude Include="src\morgana\base\types\versioned.h" />
+    <ClInclude Include="src\morgana\base\utils\base64.h" />
+    <ClInclude Include="src\morgana\base\utils\enums.h" />
+    <ClInclude Include="src\morgana\base\utils\pixelbuffer.h" />
+    <ClInclude Include="src\morgana\base\utils\meutils.h" />
+    <ClInclude Include="src\morgana\base\utils\uniquenamegen.h" />
+    <ClInclude Include="src\morgana\base\views\meview.h" />
+    <ClInclude Include="src\morgana\base\views\mevieww32.h" />
+    <ClInclude Include="src\morgana\base\views\views.h" />
+    <ClInclude Include="src\morgana\external\lodepng\lodepng.h" />
+    <ClInclude Include="src\morgana\fmk\application\meapplication.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\canvas.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\canvassurface.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\documentrender.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\image.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\inputeventsmanager.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\inputeventsreceiver.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\recttransform.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\renderstocanvas.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\screen.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\texttruetype.h" />
+    <ClInclude Include="src\morgana\fmk\framework.h" />
+    <ClInclude Include="src\morgana\fmk\gameobjects\component.h" />
+    <ClInclude Include="src\morgana\fmk\gameobjects\gameobject.h" />
+    <ClInclude Include="src\morgana\fmk\gameobjects\gameobjects.h" />
+    <ClInclude Include="src\morgana\fmk\gameobjects\mescript.h" />
+    <ClInclude Include="src\morgana\fmk\gameobjects\irenderable.h" />
+    <ClInclude Include="src\morgana\fmk\gameobjects\transform.h" />
+    <ClInclude Include="src\morgana\fmk\inputs\input.h" />
+    <ClInclude Include="src\morgana\fmk\pedia\objpedia.h" />
+    <ClInclude Include="src\morgana\fmk\renderers\genericbatch.h" />
+    <ClInclude Include="src\morgana\fmk\renderers\renderbatches.h" />
+    <ClInclude Include="src\morgana\fmk\renderers\renderer.h" />
+    <ClInclude Include="src\morgana\fmk\renderers\renderers.h" />
+    <ClInclude Include="src\morgana\fmk\renderers\streamingbuffers.h" />
+    <ClInclude Include="src\morgana\fmk\renderpaths\merenderpaths.h" />
+    <ClInclude Include="src\morgana\fmk\renderpaths\renderpath.h" />
+    <ClInclude Include="src\morgana\fmk\renderpaths\renderpathforward.h" />
+    <ClInclude Include="src\morgana\fmk\renderpaths\shadowmappingbackend.h" />
+    <ClInclude Include="src\morgana\fmk\renderpaths\standardcamerabackend.h" />
+    <ClInclude Include="src\morgana\fmk\resources\fonts\font.h" />
+    <ClInclude Include="src\morgana\fmk\canvas\text.h" />
+    <ClInclude Include="src\morgana\fmk\resources\fonts\fonts.h" />
+    <ClInclude Include="src\morgana\fmk\resources\fonts\systemfontw32.h" />
+    <ClInclude Include="src\morgana\fmk\resources\fonts\fonttruetype.h" />
+    <ClInclude Include="src\morgana\fmk\resources\images\decoders\pngdecoder.h" />
+    <ClInclude Include="src\morgana\fmk\resources\images\imagedecoder.h" />
+    <ClInclude Include="src\morgana\fmk\resources\images\imagefile.h" />
+    <ClInclude Include="src\morgana\fmk\resources\images\stdimages.h" />
+    <ClInclude Include="src\morgana\fmk\resources\materials\material.h" />
+    <ClInclude Include="src\morgana\fmk\resources\materials\materialcomponent.h" />
+    <ClInclude Include="src\morgana\fmk\resources\meresources.h" />
+    <ClInclude Include="src\morgana\fmk\resources\models\fbxmodel.h" />
+    <ClInclude Include="src\morgana\fmk\resources\models\meshdata.h" />
+    <ClInclude Include="src\morgana\fmk\resources\rawdata.h" />
+    <ClInclude Include="src\morgana\fmk\resources\resourcecontext.h" />
+    <ClInclude Include="src\morgana\fmk\resources\resourcefile.h" />
+    <ClInclude Include="src\morgana\fmk\resources\shaders\shaderbuilder.h" />
+    <ClInclude Include="src\morgana\fmk\resources\shaders\shaderfile.h" />
+    <ClInclude Include="src\morgana\fmk\resources\shaders\shaderproxy.h" />
+    <ClInclude Include="src\morgana\fmk\resources\textdata.h" />
+    <ClInclude Include="src\morgana\fmk\scene\cameras\camera.h" />
+    <ClInclude Include="src\morgana\fmk\scene\cameras\camerabackend.h" />
+    <ClInclude Include="src\morgana\fmk\scene\cameras\camerafrontend.h" />
+    <ClInclude Include="src\morgana\fmk\scene\cameras\camerarender.h" />
+    <ClInclude Include="src\morgana\fmk\scene\lights\light.h" />
+    <ClInclude Include="src\morgana\fmk\scene\lights\melights.h" />
+    <ClInclude Include="src\morgana\fmk\scene\meshes\mesh.h" />
+    <ClInclude Include="src\morgana\fmk\scene\meshes\meshcollection.h" />
+    <ClInclude Include="src\morgana\fmk\scene\meshes\meshcomponent.h" />
+    <ClInclude Include="src\morgana\fmk\scene\meshes\meshes.h" />
+    <ClInclude Include="src\morgana\fmk\scene\meshes\meshrenderer.h" />
+    <ClInclude Include="src\morgana\fmk\scene\meshes\primitives.h" />
+    <ClInclude Include="src\morgana\fmk\scene\mescene.h" />
+    <ClInclude Include="src\morgana\fmk\scene\sceneroot.h" />
+    <ClInclude Include="src\morgana\fmk\shell\meshell.h" />
+    <ClInclude Include="src\morgana\fmk\times\time.h" />
+    <ClInclude Include="src\morgana\fmk\tween\metween.h" />
+    <ClInclude Include="src\morgana\fmk\tween\tweenease.h" />
+    <ClInclude Include="src\morgana\fmk\tween\tweenfunc.h" />
+    <ClInclude Include="src\morgana\fmk\wndsys\desktop.h" />
+    <ClInclude Include="src\morgana\fmk\wndsys\desktoptheme.h" />
+    <ClInclude Include="src\morgana\fmk\wndsys\editbox.h" />
+    <ClInclude Include="src\morgana\fmk\wndsys\widget.h" />
+    <ClInclude Include="src\morgana\fmk\wndsys\window.h" />
+    <ClInclude Include="src\morgana\fmk\wndsys\wndsys.h" />
+    <ClInclude Include="src\morgana\platform\win32\platform.h" />
+    <ClInclude Include="src\morgana\standard\camera\fpscamcontroller.h" />
+    <ClInclude Include="src\morgana\standard\displayfps.h" />
+    <ClInclude Include="src\morgana\standard\mestandard.h" />
+    <ClInclude Include="src\morgana\standard\objectbuilder.h" />
+    <ClInclude Include="src\morgana\standard\ui\stdtreeview.h" />
+    <ClInclude Include="src\morgana\standard\ui\stdwindow.h" />
+    <ClInclude Include="src\testapp\testapp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="hits.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\morgana\base\binpacker\GuillotineBinPack.cpp" />
+    <ClCompile Include="src\morgana\base\binpacker\MaxRectsBinPack.cpp" />
+    <ClCompile Include="src\morgana\base\binpacker\BinPackerRect.cpp" />
+    <ClCompile Include="src\morgana\base\binpacker\ShelfBinPack.cpp" />
+    <ClCompile Include="src\morgana\base\binpacker\SkylineBinPack.cpp" />
+    <ClCompile Include="src\morgana\base\clock\metimer.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\displaydevice.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\objects\buffer.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\objects\rendertarget.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\objects\shaderprogram.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\objects\texture.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\displayobject.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\displayobjectfactory.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\opengl\common_ogl_device.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\opengl\common_oglw32_device.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\opengl\displayobjectfactory_ogl.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\opengl\shaderparser_glsl.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\pipelinestates.cpp" />
+    <ClCompile Include="src\morgana\base\io\debug.cpp" />
+    <ClCompile Include="src\morgana\base\math\box.cpp" />
+    <ClCompile Include="src\morgana\base\math\curve.cpp" />
+    <ClCompile Include="src\morgana\base\math\frustum.cpp" />
+    <ClCompile Include="src\morgana\base\math\intersection.cpp" />
+    <ClCompile Include="src\morgana\base\math\mathutils.cpp" />
+    <ClCompile Include="src\morgana\base\math\spline.cpp" />
+    <ClCompile Include="src\morgana\base\memory\managed\memorypage.cpp" />
+    <ClCompile Include="src\morgana\base\parsers\bp.cpp" />
+    <ClCompile Include="src\morgana\base\parsers\cbp.cpp" />
+    <ClCompile Include="src\morgana\base\parsers\medocument.cpp" />
+    <ClCompile Include="src\morgana\base\parsers\sbp.cpp" />
+    <ClCompile Include="src\morgana\base\parsers\xml\tinyxml2.cpp" />
+    <ClCompile Include="src\morgana\base\reflection\meclasslib.cpp" />
+    <ClCompile Include="src\morgana\base\reflection\meobject.cpp" />
+    <ClCompile Include="src\morgana\base\reflection\properties\properties.cpp" />
+    <ClCompile Include="src\morgana\base\reflection\properties\objectproperties.cpp" />
+    <ClCompile Include="src\morgana\base\reflection\properties\propertiesimpl.cpp" />
+    <ClCompile Include="src\morgana\base\reflection\serializer\serializer_base.cpp" />
+    <ClCompile Include="src\morgana\base\devices\display\vertexdef.cpp" />
+    <ClCompile Include="src\morgana\base\devices\input\idevw32.cpp" />
+    <ClCompile Include="src\morgana\base\devices\input\inputdevice.cpp" />
+    <ClCompile Include="src\morgana\base\devices\input\keyboardw32.cpp" />
+    <ClCompile Include="src\morgana\base\devices\input\mousew32.cpp" />
+    <ClCompile Include="src\morgana\base\devices\medevice.cpp" />
+    <ClCompile Include="src\morgana\base\devices\medevices.cpp" />
+    <ClCompile Include="src\morgana\base\devices\sound\sounddevice.cpp" />
+    <ClCompile Include="src\morgana\base\io\cfs.cpp" />
+    <ClCompile Include="src\morgana\base\io\dfs.cpp" />
+    <ClCompile Include="src\morgana\base\io\filestreamw32.cpp" />
+    <ClCompile Include="src\morgana\base\io\fsa.cpp" />
+    <ClCompile Include="src\morgana\base\io\mefiles.cpp" />
+    <ClCompile Include="src\morgana\base\io\mfs.cpp" />
+    <ClCompile Include="src\morgana\base\io\nfs.cpp" />
+    <ClCompile Include="src\morgana\base\io\paths.cpp" />
+    <ClCompile Include="src\morgana\base\io\rfs.cpp" />
+    <ClCompile Include="src\morgana\base\io\stream.cpp" />
+    <ClCompile Include="src\morgana\base\math\matrix.cpp" />
+    <ClCompile Include="src\morgana\base\math\plane.cpp" />
+    <ClCompile Include="src\morgana\base\math\quaternion.cpp" />
+    <ClCompile Include="src\morgana\base\math\vector2.cpp" />
+    <ClCompile Include="src\morgana\base\math\vector3.cpp" />
+    <ClCompile Include="src\morgana\base\memory\memtracker.cpp" />
+    <ClCompile Include="src\morgana\base\memory\operators.cpp" />
+    <ClCompile Include="src\morgana\base\clock\mesystemclock.cpp" />
+    <ClCompile Include="src\morgana\base\stats\framestats.cpp" />
+    <ClCompile Include="src\morgana\base\types\color255.cpp" />
+    <ClCompile Include="src\morgana\base\types\color.cpp" />
+    <ClCompile Include="src\morgana\base\types\colorhsb.cpp" />
+    <ClCompile Include="src\morgana\base\types\namedmask.cpp" />
+    <ClCompile Include="src\morgana\base\types\mestring.cpp" />
+    <ClCompile Include="src\morgana\base\types\mestringhash.cpp" />
+    <ClCompile Include="src\morgana\base\types\rect.cpp" />
+    <ClCompile Include="src\morgana\base\types\stringbuilder.cpp" />
+    <ClCompile Include="src\morgana\base\types\treeleaf.cpp" />
+    <ClCompile Include="src\morgana\base\utils\base64.cpp" />
+    <ClCompile Include="src\morgana\base\views\meview.cpp" />
+    <ClCompile Include="src\morgana\base\views\mevieww32.cpp" />
+    <ClCompile Include="src\morgana\external\lodepng\lodepng.cpp" />
+    <ClCompile Include="src\morgana\fmk\application\meapplication.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\canvassurface.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\documentrender.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\image.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\inputeventsmanager.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\inputeventsreceiver.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\recttransform.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\renderstocanvas.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\screen.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\texttruetype.cpp" />
+    <ClCompile Include="src\morgana\fmk\gameobjects\component.cpp" />
+    <ClCompile Include="src\morgana\fmk\gameobjects\gameobject.cpp" />
+    <ClCompile Include="src\morgana\fmk\gameobjects\mescript.cpp" />
+    <ClCompile Include="src\morgana\fmk\gameobjects\irenderable.cpp" />
+    <ClCompile Include="src\morgana\fmk\gameobjects\transform.cpp" />
+    <ClCompile Include="src\morgana\fmk\inputs\input.cpp" />
+    <ClCompile Include="src\morgana\fmk\renderers\renderer.cpp" />
+    <ClCompile Include="src\morgana\fmk\renderers\streamingbuffers.cpp" />
+    <ClCompile Include="src\morgana\fmk\renderpaths\renderpath.cpp" />
+    <ClCompile Include="src\morgana\fmk\renderpaths\renderpathforward.cpp" />
+    <ClCompile Include="src\morgana\fmk\renderpaths\shadowmappingbackend.cpp" />
+    <ClCompile Include="src\morgana\fmk\renderpaths\standardcamerabackend.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\fonts\font.cpp" />
+    <ClCompile Include="src\morgana\fmk\canvas\text.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\fonts\systemfontw32.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\fonts\fonttruetype.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\images\decoders\pngdecoder.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\images\imagedecoder.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\images\imagefile.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\materials\material.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\materials\materialcomponent.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\models\fbxmodel.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\rawdata.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\resourcecontext.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\resourcefile.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\shaders\shaderbuilder.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\shaders\shaderfile.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\shaders\shaderproxy.cpp" />
+    <ClCompile Include="src\morgana\fmk\resources\textdata.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\cameras\camera.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\cameras\camerabackend.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\cameras\camerafrontend.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\cameras\camerarender.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\lights\light.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\meshes\meshcollection.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\meshes\meshcomponent.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\meshes\meshrenderer.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\meshes\primitives.cpp" />
+    <ClCompile Include="src\morgana\fmk\scene\sceneroot.cpp" />
+    <ClCompile Include="src\morgana\fmk\shell\meshell.cpp" />
+    <ClCompile Include="src\morgana\fmk\times\time.cpp" />
+    <ClCompile Include="src\morgana\fmk\tween\metween.cpp" />
+    <ClCompile Include="src\morgana\fmk\tween\tweenfunc.cpp" />
+    <ClCompile Include="src\morgana\fmk\wndsys\desktop.cpp" />
+    <ClCompile Include="src\morgana\fmk\wndsys\desktoptheme.cpp" />
+    <ClCompile Include="src\morgana\fmk\wndsys\editbox.cpp" />
+    <ClCompile Include="src\morgana\fmk\wndsys\widget.cpp" />
+    <ClCompile Include="src\morgana\fmk\wndsys\window.cpp" />
+    <ClCompile Include="src\morgana\platform\win32\entry_point.cpp" />
+    <ClCompile Include="src\morgana\standard\camera\fpscamcontroller.cpp" />
+    <ClCompile Include="src\morgana\standard\displayfps.cpp" />
+    <ClCompile Include="src\morgana\standard\ui\stdtreeview.cpp" />
+    <ClCompile Include="src\morgana\standard\ui\stdwindow.cpp" />
+    <ClCompile Include="src\testapp\testapp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\morgana.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

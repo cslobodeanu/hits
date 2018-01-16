@@ -1,0 +1,522 @@
+#include "testapp.h"
+#include "mstandard.h"
+
+__implement_class(TestApplication, MorganaApplication);
+
+TestApplication::TestApplication()
+{
+}
+
+TestApplication::~TestApplication()
+{
+
+}
+
+void TestApplication::OnImageClick(Component* sender, Vector2 p, bool& ret)
+{
+	GameObject* par = sender->gameObject->GetParent()->GetParent();
+	par->BringToFront();
+}
+
+void TestApplication::Initialize()
+{
+	Super::Initialize();
+
+	GameObject* go = new GameObject();
+
+	// 	SystemFontWin32::Export("Segoe UI", 45, true);
+	// 	SystemFontWin32::Export("Arial", 34);
+	// 	SystemFontWin32::Export("Tahoma", 34);
+	//	SystemFontWin32::Export("Verdana", 12);
+
+	SystemFontWin32::Export("Verdana", 11);
+	SystemFontWin32::Export("Tahoma", 12);
+
+	SystemFontWin32::Export("Times New Roman", 32);
+	SystemFontWin32::Export("Segoe Script", 32);
+
+	SystemFontWin32::Export("Verdana", 12, false, "default");
+
+	Texture* defaultCanvasTexture = ResourceContext::global->Load<Texture>("mario.png");
+
+	GameObject* canvas = ObjectBuilder::CreateCanvas();
+
+#if 1
+	for (int i = 0; i < 0; i++)
+	{
+		GameObject* testImage = ObjectBuilder::CreateCanvasImage(canvas, defaultCanvasTexture, "TestImage");
+		testImage->GetComponent<RectTransform>()->rect.Set(Mathf::Rand01() * Screen::width, Mathf::Rand01() * Screen::height);
+		Color c = ColorHSB::RandomHue();
+		c.a = Mathf::Rand(0.0f, 1.0f);
+		testImage->GetComponent<Image>()->color = c;
+
+		testImage->transform->rotation.RotateZ(Mathf::Rand(0.0f, 360.0f));
+		testImage->transform->scale = Vector3::One * Mathf::Rand(0.5f, 4.5f);
+	}
+#endif
+
+	GameObject* testObjects = ObjectBuilder::CreateCanvasObject(canvas, "Test Objects");
+
+	for (int i = 0; i < 680; i++)
+	{
+		const int x = i % 100;
+		const int y = i / 100;
+		//Rectf rect = Rectf(Mathf::Rand01() * Screen::width, Mathf::Rand01() * Screen::height, Mathf::Rand(0.5f, 1.0f) * 300.0f, Mathf::Rand(0.5f, 1.0f) * 200.0f);
+		float w = (float)(Screen::width - 20.0f) / 100.0f;
+		Rectf rect = Rectf(x * w + 10.0f, y * w + 40.0f, w * 0.9f, w * 0.9f);
+
+		const float rotAngle = Mathf::Rand(0.0f, 360.0f);
+
+		GameObject* root = ObjectBuilder::CreateCanvasObject(testObjects, String::Format("Test Canvas Object #%d", i));
+
+		RectTransform* rt = root->RequestComponent<RectTransform>();
+		root->RequestComponent<RectTransform>()->rect.Set(rect);
+		//root->transform->rotation.RotateZ(rotAngle);
+		//obj->transform->localScale = Vector3::One * 0.2f;
+
+		GameObject* maskedRoot = NULL;
+
+		if (1) // the shadow
+		{
+			GameObject* shadow = ObjectBuilder::CreateCanvasImage(root, Texture::DefaultWhite, "Shadow");
+
+			RectTransform* rt = shadow->GetComponent<RectTransform>();
+			rt->FillParent(.0f, 0.0f);// -24.0f, -24.0f);
+
+			Image* image = shadow->GetComponent<Image>();
+			image->color = (Color)ColorHSB::RandomHue();// Color255(0, 0, 0, 155);
+			image->drawMode = Image::Default;
+			image->SetSlicedTextureBordersFromCenterSize(0.01f);
+			image->slicedScreenLeftRightBorder = 40.0f;
+			image->slicedScreenTopBottomBorder = 40.0f;
+			image->slicedDrawCenter = true;
+		}
+		
+		continue;
+
+		if (1) //mask
+		{
+			maskedRoot = ObjectBuilder::CreateCanvasImage(root, Texture::DefaultGradient, "Mask");
+			maskedRoot->GetComponent<RectTransform>()->FillParent();
+			maskedRoot->GetComponent<Image>()->color = Color(1.0f, 1.0f, 1.0f, 0.25f);
+			maskedRoot->GetComponent<Image>()->drawMode = Image::Default;
+			maskedRoot->GetComponent<Image>()->isMask = true;
+		}
+
+#if 1
+		if (1) // the bkg
+		{
+			GameObject* testImage = ObjectBuilder::CreateCanvasImage(maskedRoot, Texture::DefaultSmallDisc, "Test Rectangle");
+			testImage->GetComponent<RectTransform>()->FillParent();
+
+			InputEventsReceiver* ier = testImage->AddComponent<InputEventsReceiver>();
+			ier->OnTouchDown += Callback(OnImageClick, Component*, Vector2, bool&);
+			testImage->SetName(String::Format("Image #%d", i));
+
+			Color c = ColorHSB(Mathf::Rand01(), 1.0f, Mathf::Rand01());
+			c.a = 1.0f;// (byte)(Mathf::Rand01() * 255.0f);
+			testImage->GetComponent<Image>()->color = c;
+
+			testImage->GetComponent<Image>()->drawMode = Image::Sliced;
+			testImage->GetComponent<Image>()->SetSlicedTextureBordersFromCenterSize(0.01f);
+			testImage->GetComponent<Image>()->slicedDrawCenter = 1.0f;// 1.25f;
+
+
+			// the border
+			GameObject* border = ObjectBuilder::CreateCanvasImage(root, Texture::DefaultSmallCircle, "Border");
+			border->GetComponent<RectTransform>()->rect.Set(testImage->GetComponent<RectTransform>()->rect);
+			border->GetComponent<Image>()->color = Color::white;
+			border->GetComponent<Image>()->drawMode = Image::Sliced;
+			border->GetComponent<Image>()->SetSlicedTextureBordersFromCenterSize(0.01f);
+			border->GetComponent<Image>()->slicedDrawCenter = false;
+
+			GameObject* txt = ObjectBuilder::CreateCanvasText(maskedRoot, String::Format("%d. Drag mi-e jocul romanesc, dar nu stiu ca sa-l pornesc.", i));
+			txt->GetComponent<RectTransform>()->FillParent(12.0f, 12.0f);
+
+			Text* text = txt->GetComponent<Text>();
+
+			text->color = 1.0f - c;
+			text->style = Text::StyleSimple;
+			text->font = ResourceContext::global->Load<Font>("tahoma_12");
+			text->wrap = true;
+		}
+#endif
+	}
+
+
+#if 1
+	GameObject* debugRoot = ObjectBuilder::CreateCanvasObject(canvas, "debugroot");
+
+	// debug textures
+	for (int i = 0; i < 1; i++)
+	{
+		const int x = i % 10;
+		const int y = i / 10;
+		const float sz = 200.0f;
+		Rectf rect = Rectf(x * (sz + 5.0f), y * (sz + 5.0f), sz, sz);
+		rect.Offset(50, 100);
+
+		GameObject* elem = ObjectBuilder::CreateCanvasObject(debugRoot, String::Format("debug tex wnd #%d", i));
+		elem->GetComponent<RectTransform>()->rect.Set(rect);
+
+		GameObject* shadow = ObjectBuilder::CreateCanvasImage(elem, Texture::DefaultBlob, "Shadow");
+		shadow->GetComponent<RectTransform>()->FillParent(-34.0f, -34.0f);
+		shadow->GetComponent<Image>()->color = Color255(0, 0, 0, 155);
+		shadow->GetComponent<Image>()->drawMode = Image::Sliced;
+		shadow->GetComponent<Image>()->SetSlicedTextureBordersFromCenterSize(0.01f);
+		shadow->GetComponent<Image>()->slicedScreenLeftRightBorder = 40.0f;
+		shadow->GetComponent<Image>()->slicedScreenTopBottomBorder = 40.0f;
+		shadow->GetComponent<Image>()->slicedDrawCenter = false;
+		
+		GameObject* testImage = ObjectBuilder::CreateCanvasImage(elem, Texture::DefaultSmallDisc, "Test Rectangle");
+		testImage->GetComponent<RectTransform>()->FillParent();
+
+		Color c = ColorHSB(Mathf::Rand01(), 1.0f, Mathf::Rand01());
+		c.a = 1.0f;
+		testImage->GetComponent<Image>()->color = c;
+
+		testImage->GetComponent<Image>()->drawMode = Image::Sliced;
+		testImage->GetComponent<Image>()->SetSlicedTextureBordersFromCenterSize(0.01f);
+		testImage->GetComponent<Image>()->slicedScreenLeftRightBorder = 4.0f;
+		testImage->GetComponent<Image>()->slicedScreenTopBottomBorder = 4.0f;
+		testImage->GetComponent<Image>()->slicedDrawCenter = true;
+
+		GameObject* border = ObjectBuilder::CreateCanvasImage(testImage, Texture::DefaultSmallCircle, "Border");
+		border->GetComponent<RectTransform>()->FillParent();
+		border->GetComponent<Image>()->color = Color::white;
+		border->GetComponent<Image>()->drawMode = Image::Sliced;
+		border->GetComponent<Image>()->SetSlicedTextureBordersFromCenterSize(0.01f);
+		border->GetComponent<Image>()->slicedScreenLeftRightBorder = 4.0f;
+		border->GetComponent<Image>()->slicedScreenTopBottomBorder = 4.0f;
+		border->GetComponent<Image>()->slicedDrawCenter = false;
+
+		GameObject* tex = ObjectBuilder::CreateCanvasImage(elem, ResourceContext::global->Load<Texture>("checkered16"), "debugtexture");
+		tex->GetComponent<RectTransform>()->FillParent(32.0f, 32.0f);
+		tex->GetComponent<Image>()->color = Color::white;
+
+		GameObject* txt = ObjectBuilder::CreateCanvasText(testImage, "***");
+		txt->GetComponent<RectTransform>()->FillParent(10.0f);
+ 		txt->GetComponent<Text>()->color = 1.0f - c;
+		txt->GetComponent<Text>()->style = Text::StyleSimple;
+		txt->GetComponent<Text>()->font = ResourceContext::global->Load<Font>("default");
+		txt->GetComponent<Text>()->wrap = true;
+		txt->SetName("caption");
+	}
+#endif
+
+	GameObject* elem = ObjectBuilder::CreateCanvasObject(debugRoot, "freetypetest");
+	elem->GetComponent<RectTransform>()->rect.Set(300.0f, 190.0f, 456, 656);
+	TextFT* tft = elem->AddComponent<TextFT>();
+	tft->color = Color::white;
+	tft->font = ResourceContext::global->Load<TrueTypeFont>("truetype/georgia.ttf");
+	tft->fontSize = 18;
+	tft->verticalAlignment = TextVerticalAlignment::AlignTop;
+	tft->alignment = TextHorizontalAlignment::AlignMiddle;
+	tft->text = ResourceContext::global->Load<TextData>("")->text;// "He could've tuned in tuned in\n\
+	But he tuned out\n\
+	A bad time nothing could save him\n\
+	Alone in a corridor waiting locked out\n\
+	He got up outta there ran for hundreds of miles\n\
+	He made it to the ocean had a smoke in a tree\n\
+	The wind rose up set him down on his knee\n\
+	A wave came crashing like a fist to the jaw\n\
+	Delivered him wings \"Hey look at me now\"\n\
+	Arms wide open with the sea as his floor\n\
+	Oh power oh\n\
+	He's flying\n\
+	Whole\n\
+	High wide, oh\n\
+	He floated back down 'cause he wanted to share\n\
+	His key to the locks on the chains he saw everywhere\n\
+	But first he was stripped and then he was stabbed\n\
+	By faceless men, well, fuckers\n\
+	He still stands\n\
+	And he still gives his love, he just gives it away\n\
+	The love he receives is the love that is saved\n\
+	And sometimes is seen a strange spot in the sky\n\
+	A human being that was given to fly\n\
+	High flying\n\
+	Oh, oh\n\
+	High flying\n\
+	Oh, oh\n\
+	He's flying\n\
+	Oh, oh";
+
+
+	/*elem = ObjectBuilder::CreateCanvasObject(debugRoot, "freetypetest");
+	elem->GetComponent<RectTransform>()->rect.Set(300.0f, 290.0f, 256, 256);
+	tft = elem->AddComponent<TextFT>();
+	tft->fontSize = 32;
+
+	elem = ObjectBuilder::CreateCanvasObject(debugRoot, "freetypetest");
+	elem->GetComponent<RectTransform>()->rect.Set(300.0f, 390.0f, 256, 256);
+	tft = elem->AddComponent<TextFT>();
+	tft->fontSize = 9;
+
+	elem = ObjectBuilder::CreateCanvasObject(debugRoot, "freetypetest");
+	elem->GetComponent<RectTransform>()->rect.Set(50.0f, 490.0f, 256, 256);
+	tft = elem->AddComponent<TextFT>();
+	tft->fontSize = 49;*/
+
+	ObjectBuilder::CreateFPSCameraController();
+
+
+	GameObject* obj = ObjectBuilder::CreateCanvasObject(canvas, "DisplayFPS");
+	DisplayFPS* fps = obj->AddComponent<DisplayFPS>();
+
+	if (GameObject::root->Find("MainCamera") == NULL)
+	{
+		GameObject* go = ObjectBuilder::CreateCamera("MainCamera");
+		Camera* cam = go->GetComponent<Camera>();
+
+		cam->projectionType = Camera::Perspective;
+		cam->farPlane = 1500.0f;
+		cam->transform->SetIdentity();
+		cam->transform->position = Vector3(0, 10, 60);
+	}
+}
+
+void TestApplication::RunFrame()
+{
+	Super::RunFrame();
+
+#if 1
+	if (Input::GetKeyDown(Keys::Left) || Input::GetKeyDown(Keys::Right))
+	{
+		GameObject* dl = GameObject::root->Find("directionalL");
+		Vector3 angles = dl->transform->rotation.Euler();
+		if (Input::GetKeyDown(Keys::Left))
+			angles.x += Time::deltaTime * 30.0f;
+		if (Input::GetKeyDown(Keys::Right))
+			angles.x -= Time::deltaTime * 30.0f;
+
+		dl->transform->rotation.Euler(angles);
+	}
+#endif
+
+#if 1 // test objects
+	if (GameObject::root->Find("Dummy") == NULL)
+	{
+		GameObject* dummy = new GameObject();
+		dummy->SetName("Dummy");
+		dummy->SetParent(GameObject::root);
+
+		MeshData* sm = Primitive::GeneratePolygon<VertexPosNormalTex>(32);
+		Matrix tm = Matrix::Identity;
+		tm.Scale(5.0f);
+		tm.Translation() = Vector3(0.0f, 0.0f, -10.0f);
+		Primitive::Transform(sm, &tm);
+		Vector3 up(0.0f, 0.0f, 20.0f);
+		MeshData* sm2 = Primitive::ExtrudePolygon(sm, up, 2);
+		Primitive::AppendMesh(sm2, sm);
+		tm = Matrix::Identity;
+		tm.Translate(up);
+		Primitive::AppendMesh(sm2, sm, &tm);
+		Primitive::SetVertexColors(sm2, Color::green);
+
+		/*GameObject* test = ObjectBuilder::CreateMeshObject("generated hexagon", sm2);
+		test->SetParent(dummy);
+		test->SetName("TestCylinder");
+		test->AddComponent<MaterialComponent>()->material = ResourceContext::global->Load<Material>("perpixelphong");*/
+
+		// random cubes
+		for (int k = 0; k < 90; k++)
+		{
+			int edges = Mathf::Rand(40.0f, 190.0f);
+			sm = Primitive::GeneratePolygon<VertexPosNormalTex>(edges);
+			Matrix tm = Matrix::Identity;
+
+			const float cubeSize = Mathf::Rand(4.5f, 8.0f) * 0.5f;
+			const float cubeSize2 = cubeSize * Mathf::Sqrt2;
+
+			tm.RotateX(90.0f);
+			tm.Scale(cubeSize);
+
+			tm.Translation() = Vector3(0.0f, 0.0f, -cubeSize2 * 0.5f);
+			Primitive::Transform(sm, &tm);
+			Vector3 up(0.0f, cubeSize2 * Mathf::Rand(1.0f, 2.0f), 0.0f);
+			sm2 = Primitive::ExtrudePolygon(sm, up, 2);
+
+			Primitive::AppendMesh(sm2, sm);
+			tm = Matrix::Identity;
+			tm.Translate(up);
+			Primitive::AppendMesh(sm2, sm, &tm);
+			Primitive::SetVertexColors(sm2, Color::green);
+
+			GameObject* test = ObjectBuilder::CreateMeshObject(String("generated cube") + k, sm2);
+			test->SetParent(dummy);
+			test->SetName(String::Format("Cube %d", k));
+
+			tm = Matrix::Identity;
+			tm.RotateY(Mathf::Rand01() * 360.0f);
+			tm.Translate(Vector3::UnitZ * Mathf::Rand01() * 130.0f);// +Vector3::UnitY * cubeSize2);
+
+			test->transform->position = tm.Translation();
+			//test->transform->rotation.RotateX(Mathf::Rand01() * 90.0f);
+			test->transform->rotation.RotateY(Mathf::Rand01() * 90.0f);
+			//test->transform->rotation.RotateZ(Mathf::Rand01() * 90.0f);
+			test->AddComponent<MaterialComponent>()->material = ResourceContext::global->Load<Material>("perpixelphong");
+		}
+
+
+
+		sm = Primitive::GeneratePolygon<VertexPosNormalTex>(4);
+		tm = Matrix::Identity;
+		tm.Scale(300.0f);
+		tm.RotateX(-90.0f);
+		Primitive::Transform(sm, &tm);
+
+		GameObject* test2 = ObjectBuilder::CreateMeshObject("generated square", sm);
+		test2->SetParent(dummy);
+		test2->SetName("TestSquare");
+		test2->AddComponent<MaterialComponent>()->material = ResourceContext::global->Load<Material>("perpixelphong");
+		test2->GetComponent<Renderer>()->castShadows = false;
+
+
+		MTimer* testTimer = new MTimer(1.0f / 60.0f);
+		testTimer->SetName("testTimer");
+
+		testTimer->OnTick += Callback(OnTimer, MTimer*, float);
+
+#if 1
+		GameObject* al = ObjectBuilder::CreateLight(Light::AmbientLight, Color::white * 0.15f, "ambient");
+		al->SetParent(GameObject::root);
+
+		GameObject* dl = ObjectBuilder::CreateLight(Light::DirectionalLight, Color::white * 0.15f, "directionalL");
+		dl->SetParent(GameObject::root);
+		dl->transform->rotation.RotateX(-50.0f);
+		dl->transform->rotation.RotateY(-30.0f);
+
+		const int numLights = 8;
+		for (int i = 0; i < numLights; i++)
+		{
+			String ln = String("pointlight") + i;
+
+			Color c = ColorHSB::RandomHue();
+			GameObject* pl = ObjectBuilder::CreateLight(Light::PointLight, c, ln);
+			pl->SetParent(GameObject::root);
+
+			pl->transform->localRotation = Quaternion::Identity;
+
+			const float dist = Mathf::Rand(3.0f, 5.0f) * 40.0f;
+			Vector3 v = Vector3(0.0f, 0.0f, dist);
+			pl->transform->localPosition = pl->transform->localRotation * v;
+
+			pl->GetComponent<Light>()->attenuation = Vector3(1.0f, 0.03f, 0.0f);//0.032f + Mathf::Rand11() * 0.008f);
+
+			float* ff = new float[2];
+			ff[0] = Mathf::Sign(Mathf::Rand11()) * Mathf::Rand(100.0f, 180.0f);
+			ff[1] = dist;
+			pl->SetUserData(ff);
+		}
+#endif
+	}
+#endif
+
+#if 1
+	// debug
+	GameObject* debugRoot = GameObject::root->Find("debugroot");
+
+	if (debugRoot != NULL)
+	{
+		for (int i = 0; i < debugRoot->GetChildrenCount(); i++)
+		{
+			GameObject* child = debugRoot->GetChild(i);
+			if (i == 0) // directional light depth
+			{
+				child->GetComponentInChildren<Text>()->text = "directional light depth";
+				child->Find("debugtexture")->GetComponent<Image>()->texture = ResourceContext::global->Load<Texture>("directionalLightDepth");
+			}
+		}
+	}
+#endif
+
+#if 0
+	// testing
+
+	DisplayDevice::main->BindObjectNull(DISPLAY_OBJECT_SHADER_PROGRAM);
+
+	ManagedVBO8192 buffer;
+	Managed::MemoryPage::Block_t* block = buffer.Alloc(512);
+	void* data = block->Lock();
+	block->Unlock();
+	int hh = block->GetHandle();
+
+	{
+		Canvas::MCanvas canvas;
+		canvas.SetBlendMode(BlendState::AlphaBlend);
+
+#if 1
+		Color c = Color::FromHSB(Mathf::Rand01(), 1.0f, Mathf::Rand01());
+		c.a = (unsigned char)(Mathf::Rand01() * 255.0f);
+		canvas.SetColor(Color::white);
+
+		Texture* tex = ResourceContext::global->Load<Texture>("mario.png");
+		canvas.SetTexture(tex);//Texture::Default(Math::MathUtils::Rand() % Texture::DEFAULT_TEXTURES_COUNT));
+
+		const float squareSize = 200.0f;
+		const float posX = 40.0f;
+		const float posY = 200.0f;
+		canvas.FillRect(posX, posY, squareSize, squareSize);
+#endif
+
+		canvas.SetColor(Color::cyan);
+
+		FontRenderer fntRnd(&canvas);
+		Font* fnt = ResourceFile::Translate<Font>("fonts/verdana_11.mfnt");
+		fntRnd.SetDesiredHeight(fnt, 11);
+		fntRnd.SetStyle(FontRenderer::FONT_STYLE_SIMPLE);
+
+		//const char txt[] = "Sanda Slobodeanu Scooby Doo PC AT 286 TaTa iiii11";
+		const char txt[] = "implementation<DisplayObjectFactory>->UpdateSubresource(testTexture, r, 0, img->GetPixels());";
+		Vector2 size = fntRnd.Measure(fnt, txt);
+
+		canvas.SetColor(Color::dark_slate_gray);
+		canvas.SetTexture(Texture::CreateBasicTexture(Texture::DEFAULT_TEXTURE_GRADIENT));
+		//canvas.FillRect(20, 20, size.x, size.y);
+
+		//canvas.FillRect(100, 100, 400, 400);
+
+		canvas.SetColor(Color::black);
+		fntRnd.Draw(fnt, txt, 20, 20);
+	}
+#endif
+
+	GameObject* testObjects = GameObject::root->Find("Test Objects");
+	for (int i = 0; i < testObjects->GetChildrenCount(); i++)
+	{
+		Image* img = testObjects->GetChild(i)->GetComponentInChildren<Image>();
+		img->color = (Color)ColorHSB(Mathf::Rand01(), 1.0f, 1.0f);//Mathf::Rand01() * 0.4f + 0.6f);
+	}
+}
+
+void TestApplication::OnTimer(MTimer* t, const float overShootFactor)
+{
+	GameObject* node = GameObject::root->Find("TestCylinder");
+	if (node)
+	{
+		node->transform->localPosition = Vector3(0.0f, 10.0f, 0.0f);
+		node->transform->localRotation.RotateX(2.0f);
+		node->transform->localRotation.RotateZ(4.0f);
+	}
+
+	node = GameObject::root->Find("TestSquare");
+	if (node)
+	{
+	}
+
+	Array<Light*> lights = GameObject::root->GetComponentsInChildren<Light>();
+	for (int i = 0; i < lights.Length(); i++)
+	{
+		Light* pl = lights[i];
+		if (pl->type != Light::PointLight) continue;
+
+		pl->transform->localPosition = Vector3::Zero;
+		const float ang = ((float*)pl->gameObject->GetUserData())[0];
+		const float dist = ((float*)pl->gameObject->GetUserData())[1];
+		pl->transform->localRotation.RotateY(ang * Time::deltaTime);
+		pl->transform->localPosition = pl->transform->localRotation * Vector3(0.0f, 20.0f, dist);
+
+		//pl->m_vAttenuation = Vector3(0.0f, 0.027f, 0.0028f + MathUtils::Rand11() * 0.001f);
+	}
+}

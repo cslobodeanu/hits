@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<material name = "Default Material">
+<materialdata>
+	<cull value ="none" />
+	<depthwrite value = "yes"/>
+	<depthtest value="lequal"/>
+	<blend value = "opaque"/>
+	<shaders vertex="vertexpostex" pixel="vertexpostex"/>
+	<texture0 path="default:checkered" />
+</materialdata>
+
+</material>

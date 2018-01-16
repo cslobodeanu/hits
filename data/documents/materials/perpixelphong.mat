@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<material name = "Lit/Perpixel Phong">
+<materialdata>
+	<cull value ="none" />
+	<depthwrite value = "yes"/>
+	<depthtest value="lequal"/>
+	<blend value = "opaque"/>
+	<specular value = "(1.0, 1.0, 1.0)"/>
+	<emissive value = "0.0, 0.0, 0.0"/>
+	<shaders file="vertexposnormaltex_plight"/>
+</materialdata>
+</material>

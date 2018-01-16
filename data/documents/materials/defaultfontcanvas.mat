@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<material name = "Default Font Canvas">
+<materialdata>
+	<cull value ="none" />
+	<depthwrite value = "no"/>
+	<depthtest value="lequal"/>
+	<blend value = "alpha"/>
+	<shaders file="defaultfontcanvas"/>
+</materialdata>
+
+</material>

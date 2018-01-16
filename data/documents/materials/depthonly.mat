@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<material name = "Depth Only">
+<materialdata>
+	<cull value ="none" />
+	<depthwrite value = "yes"/>
+	<depthtest value="lequal"/>
+	<blend value = "opaque"/>
+	<shaders file="writedepth"/>
+</materialdata>
+
+</material>

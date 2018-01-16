@@ -1,0 +1,23 @@
+<!--Material
+{
+	name = "Lit/PerPixel Directional Light";
+	cull = none;
+	depthwrite = yes;
+	depthtest = lequal;
+	blend = opaque;
+	shader = "vertexposnormaltex_dlight";
+}
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<material name = "Lit/Perpixel Directional Light">
+<materialdata>
+	<cull value ="none" />
+	<depthwrite value = "yes"/>
+	<depthtest value="lequal"/>
+	<blend value = "opaque"/>
+	<shaders file="vertexposnormaltex_dlight"/>
+</materialdata>
+
+</material>

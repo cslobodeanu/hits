@@ -1,0 +1,90 @@
+﻿Build started 11/3/2016 12:05:15 PM.
+     1>Project "E:\work\hits\src\morgana\external\libnoise\libnoise.vcxproj" on node 6 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _WINDLL /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\win32/Release\\" /Fd".\win32/Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\module\abs.cpp src\module\add.cpp src\module\billow.cpp src\module\blend.cpp src\module\cache.cpp src\module\checkerboard.cpp src\module\clamp.cpp src\module\const.cpp src\module\curve.cpp src\module\cylinders.cpp src\module\displace.cpp src\module\exponent.cpp src\module\invert.cpp src\module\max.cpp src\module\min.cpp src\module\modulebase.cpp src\module\multiply.cpp src\module\perlin.cpp src\module\power.cpp src\module\ridgedmulti.cpp src\module\rotatepoint.cpp src\module\scalebias.cpp src\module\scalepoint.cpp src\module\select.cpp src\module\spheres.cpp src\module\terrace.cpp src\module\translatepoint.cpp src\module\turbulence.cpp src\module\voronoi.cpp src\model\cylinder.cpp src\model\line.cpp src\model\plane.cpp src\model\sphere.cpp src\win32\dllmain.cpp src\latlon.cpp src\noisegen.cpp
+         abs.cpp
+         add.cpp
+         billow.cpp
+         blend.cpp
+         cache.cpp
+         checkerboard.cpp
+         clamp.cpp
+         const.cpp
+         curve.cpp
+         cylinders.cpp
+         displace.cpp
+         exponent.cpp
+         invert.cpp
+         max.cpp
+         min.cpp
+         modulebase.cpp
+         multiply.cpp
+         perlin.cpp
+         power.cpp
+         ridgedmulti.cpp
+         Generating Code...
+         Compiling...
+         rotatepoint.cpp
+         scalebias.cpp
+         scalepoint.cpp
+         select.cpp
+         spheres.cpp
+         terrace.cpp
+         translatepoint.cpp
+         turbulence.cpp
+         voronoi.cpp
+         cylinder.cpp
+         line.cpp
+         plane.cpp
+         sphere.cpp
+         dllmain.cpp
+         latlon.cpp
+         noisegen.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D NDEBUG /D _VC80_UPGRADE=0x0600 /l"0x0409" /Isrc\win32 /nologo /fo".\win32/Release\noise.res" src\win32\noise.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\win32/Release\libnoise.dll" /INCREMENTAL:NO /NOLOGO odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\src\win32\libnoise.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\win32/Release\libnoise.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\win32/Release\libnoise.lib" /MACHINE:X86 /SAFESEH /DLL .\win32/Release\noise.res
+         .\win32/Release\abs.obj
+         .\win32/Release\add.obj
+         .\win32/Release\billow.obj
+         .\win32/Release\blend.obj
+         .\win32/Release\cache.obj
+         .\win32/Release\checkerboard.obj
+         .\win32/Release\clamp.obj
+         .\win32/Release\const.obj
+         .\win32/Release\curve.obj
+         .\win32/Release\cylinders.obj
+         .\win32/Release\displace.obj
+         .\win32/Release\exponent.obj
+         .\win32/Release\invert.obj
+         .\win32/Release\max.obj
+         .\win32/Release\min.obj
+         .\win32/Release\modulebase.obj
+         .\win32/Release\multiply.obj
+         .\win32/Release\perlin.obj
+         .\win32/Release\power.obj
+         .\win32/Release\ridgedmulti.obj
+         .\win32/Release\rotatepoint.obj
+         .\win32/Release\scalebias.obj
+         .\win32/Release\scalepoint.obj
+         .\win32/Release\select.obj
+         .\win32/Release\spheres.obj
+         .\win32/Release\terrace.obj
+         .\win32/Release\translatepoint.obj
+         .\win32/Release\turbulence.obj
+         .\win32/Release\voronoi.obj
+         .\win32/Release\cylinder.obj
+         .\win32/Release\line.obj
+         .\win32/Release\plane.obj
+         .\win32/Release\sphere.obj
+         .\win32/Release\dllmain.obj
+         .\win32/Release\latlon.obj
+         .\win32/Release\noisegen.obj
+            Creating library .\win32/Release\libnoise.lib and object .\win32/Release\libnoise.exp
+         libnoise.vcxproj -> E:\work\hits\src\morgana\external\libnoise\.\win32/Release\libnoise.dll
+     1>Done Building Project "E:\work\hits\src\morgana\external\libnoise\libnoise.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.73

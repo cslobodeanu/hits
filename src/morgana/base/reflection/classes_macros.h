@@ -1,0 +1,7 @@
+#ifndef __MORGANA_BASE_REFLECTION_CLASSES_MACROS_H__
+#define __MORGANA_BASE_REFLECTION_CLASSES_MACROS_H__
+
+#include <stdio.h>
+
+
+#endif

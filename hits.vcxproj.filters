@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\morgana">
+      <UniqueIdentifier>{7676f053-a8ad-4b81-bdbd-b798624c4508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base">
+      <UniqueIdentifier>{dfc52b1d-715e-4db2-948d-c8a85689ded8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\platform">
+      <UniqueIdentifier>{e737802c-5f94-49b6-bed9-9fc99c9f8e15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\compatibility">
+      <UniqueIdentifier>{3ad2c208-9d50-4dd4-b5a3-dacc7d82797f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\types">
+      <UniqueIdentifier>{b07a7c75-2811-476d-b93c-d1deb679beb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk">
+      <UniqueIdentifier>{9f0479aa-2076-4730-b508-77082957f6ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\application">
+      <UniqueIdentifier>{1638fef5-3fb0-4c8b-8595-dc0769debb03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\io">
+      <UniqueIdentifier>{95ba5372-4ae6-4b9d-9e25-52a492424446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\math">
+      <UniqueIdentifier>{3740e5f9-4c69-4193-9f0a-b78b1091c852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\memory">
+      <UniqueIdentifier>{e96965a9-153a-4dd8-a5fa-07ef30ad8cdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\time">
+      <UniqueIdentifier>{390e2322-161c-440e-ac11-75bf61d4e9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\views">
+      <UniqueIdentifier>{20ff14e7-e0d1-4fbc-8e15-ab23e0cb1618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\devices">
+      <UniqueIdentifier>{f0b39670-f8a1-4357-8c0b-d97de2d47b53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\devices\input">
+      <UniqueIdentifier>{05f4831e-43eb-47a7-8592-479e8d6db497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\devices\sound">
+      <UniqueIdentifier>{b15c77cc-89f2-41c4-b4b4-3f8d9dee2797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\devices\network">
+      <UniqueIdentifier>{371309fc-1d16-4a09-8111-986129a1b891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\devices\display">
+      <UniqueIdentifier>{394dcee1-c324-45dd-b9e3-ef4ac0270304}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\devices\display\opengl">
+      <UniqueIdentifier>{0720a9b4-92b4-4cac-9286-7e8403295f24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\devices\display\objects">
+      <UniqueIdentifier>{45379923-82d0-4734-bd44-b2b23ca73262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\devices\display\directx11">
+      <UniqueIdentifier>{8f321f27-554f-4fa1-8f30-595ca2dadf1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\devices\display\metal">
+      <UniqueIdentifier>{c28b2f78-5a91-4fee-9315-96f6267669cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\canvas">
+      <UniqueIdentifier>{ccdf3c0c-1951-4834-bdc6-b8ce5a1fe558}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\resources">
+      <UniqueIdentifier>{dfb9885f-d030-489c-9168-5a2834743085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\resources\fonts">
+      <UniqueIdentifier>{4ae640e2-4055-4971-864f-1904bb25ade1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\resources\images">
+      <UniqueIdentifier>{e2de2ad5-80d0-4747-b5b3-5d17a29860ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\resources\images\decoders">
+      <UniqueIdentifier>{3bfa3059-b8be-46a5-b5b5-5b12e81a4915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\external">
+      <UniqueIdentifier>{6a98f8cf-01fd-41fe-bdbc-8434297c6798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\external\lodepng">
+      <UniqueIdentifier>{52ad34aa-d812-4b9d-adbe-d4b1924c1f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\reflection">
+      <UniqueIdentifier>{75e37ab0-1b6f-4bdf-88d8-a19def58a177}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\reflection\properties">
+      <UniqueIdentifier>{e24c07e7-d1b5-4d97-a744-897e25f05dde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\reflection\serializer">
+      <UniqueIdentifier>{4d206081-123e-408e-b642-251a06f4f585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\times">
+      <UniqueIdentifier>{14d334ed-96bb-4a76-9f9d-64e7f0e5d83b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\gameobjects">
+      <UniqueIdentifier>{a2f6d2c5-69f4-4ca3-9d1b-e6a1e7c0735d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\renderers">
+      <UniqueIdentifier>{65adc2eb-43e2-4f43-ad4b-7c7a1345d054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\scene">
+      <UniqueIdentifier>{61c5ed9a-2ccd-4f52-8360-3bac89ddd4c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\inputs">
+      <UniqueIdentifier>{ff719457-3a55-4727-82f6-bf363b767459}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\pedia">
+      <UniqueIdentifier>{f1304341-4317-40d1-be24-7f129fbaa7ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\renderpaths">
+      <UniqueIdentifier>{09a96a33-e94a-4c8a-b5ba-0b32a7df3c14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\shell">
+      <UniqueIdentifier>{03bc6f6e-dbc6-428f-bb39-44d23e42139c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\tween">
+      <UniqueIdentifier>{bc61997e-9321-40ac-9bc0-ca7c30e5615c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\widgets">
+      <UniqueIdentifier>{0ba81de3-9aaf-4f7c-bfd6-d5491b123d30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\resources\shaders">
+      <UniqueIdentifier>{1d68cd6e-bd3e-4805-bae9-bcda70e2b114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\resources\materials">
+      <UniqueIdentifier>{64ece554-7843-4af6-99ce-3a9d24659c3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\parsers">
+      <UniqueIdentifier>{30c96b30-36c6-42af-9332-674815213310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\memory\managed">
+      <UniqueIdentifier>{d79c1d4b-cbd0-4d40-9380-b8887b95a5a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\testapp">
+      <UniqueIdentifier>{55cd9532-bd50-4833-9939-a02bac828e91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\standard">
+      <UniqueIdentifier>{4dcd7c28-ca98-4c6d-91e8-b00bb5b8e6b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\parsers\xml">
+      <UniqueIdentifier>{9e77e904-bfc9-4d1a-a0ee-7e648264c46e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\wndsys">
+      <UniqueIdentifier>{1e665a98-7900-4f45-9423-7ffeb20adfc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\utils">
+      <UniqueIdentifier>{fc66a365-94f1-4893-a33e-a31c6860eda4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\stats">
+      <UniqueIdentifier>{2cfd9492-e181-418d-ac1e-f707b19cfce9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\scene\cameras">
+      <UniqueIdentifier>{ebab83ce-2e61-439e-9976-51f92525fb01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\scene\lights">
+      <UniqueIdentifier>{4b6e2b82-c1df-4a4d-8361-4b383c828c52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\scene\meshes">
+      <UniqueIdentifier>{e1d403d7-00c4-418b-b24f-208a839fdabf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\base\binpacker">
+      <UniqueIdentifier>{0cd32efa-e785-4e11-b654-a9b01f674897}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\standard\ui">
+      <UniqueIdentifier>{2bf16b11-68a3-4e2f-ba5b-f3f9363b4715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\morgana\fmk\resources\models">
+      <UniqueIdentifier>{b8d9fc78-d6e5-421a-ba23-88db1b5b3354}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\morgana\base\compatibility\compatibility.h">
+      <Filter>Source Files\morgana\base\compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\base.h">
+      <Filter>Source Files\morgana\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\paths.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\platform\win32\platform.h">
+      <Filter>Source Files\morgana\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\debug.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\stream.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\vector2.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\vector3.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\matrix.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\quaternion.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\plane.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\fsa.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\dfs.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\mfs.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\rfs.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\cfs.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\nfs.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\memory\macros.h">
+      <Filter>Source Files\morgana\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\memory\operators.h">
+      <Filter>Source Files\morgana\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\memory\memtracker.h">
+      <Filter>Source Files\morgana\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\views\views.h">
+      <Filter>Source Files\morgana\base\views</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\devices.h">
+      <Filter>Source Files\morgana\base\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\input\inputdevice.h">
+      <Filter>Source Files\morgana\base\devices\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\displaydevice.h">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\input\mousedef.h">
+      <Filter>Source Files\morgana\base\devices\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\vertexdef.h">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\input\kbdef.h">
+      <Filter>Source Files\morgana\base\devices\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\sound\sounddevice.h">
+      <Filter>Source Files\morgana\base\devices\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\dispcmd.h">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\input\keyboardw32.h">
+      <Filter>Source Files\morgana\base\devices\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\input\mousew32.h">
+      <Filter>Source Files\morgana\base\devices\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\opengl\oglheaders.h">
+      <Filter>Source Files\morgana\base\devices\display\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\rendepipelinedefs.h">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\memory\localmemoryblock.h">
+      <Filter>Source Files\morgana\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\objects\texture.h">
+      <Filter>Source Files\morgana\base\devices\display\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\objects\buffer.h">
+      <Filter>Source Files\morgana\base\devices\display\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\objects\rendertarget.h">
+      <Filter>Source Files\morgana\base\devices\display\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\objects\shaderprogram.h">
+      <Filter>Source Files\morgana\base\devices\display\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\pipelinestates.h">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\opengl\common_ogl_device.h">
+      <Filter>Source Files\morgana\base\devices\display\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\opengl\common_oglw32_device.h">
+      <Filter>Source Files\morgana\base\devices\display\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\vector4.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\opengl\displayobjectfactory_ogl.h">
+      <Filter>Source Files\morgana\base\devices\display\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\displayobjectfactory.h">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\displayobject.h">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\fonts\font.h">
+      <Filter>Source Files\morgana\fmk\resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\fonts\systemfontw32.h">
+      <Filter>Source Files\morgana\fmk\resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\images\imagefile.h">
+      <Filter>Source Files\morgana\fmk\resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\images\decoders\pngdecoder.h">
+      <Filter>Source Files\morgana\fmk\resources\images\decoders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\images\imagedecoder.h">
+      <Filter>Source Files\morgana\fmk\resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\external\lodepng\lodepng.h">
+      <Filter>Source Files\morgana\external\lodepng</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\resourcefile.h">
+      <Filter>Source Files\morgana\fmk\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\classes_macros.h">
+      <Filter>Source Files\morgana\base\reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\singleton.h">
+      <Filter>Source Files\morgana\base\reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\reflection.h">
+      <Filter>Source Files\morgana\base\reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\serializer\serializer_base.h">
+      <Filter>Source Files\morgana\base\reflection\serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\serializer\serializer_binary.h">
+      <Filter>Source Files\morgana\base\reflection\serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\serializer\serializer_text.h">
+      <Filter>Source Files\morgana\base\reflection\serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\serializer\serializer_xml.h">
+      <Filter>Source Files\morgana\base\reflection\serializer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\box.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\curve.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\frustum.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\intersection.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\mathutils.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\sphere.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\spline.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\clock\datetime.h">
+      <Filter>Source Files\morgana\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\times\time.h">
+      <Filter>Source Files\morgana\fmk\times</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\canvas.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\image.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\renderstocanvas.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\gameobjects\component.h">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\gameobjects\gameobject.h">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\gameobjects\gameobjects.h">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\gameobjects\transform.h">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderers\renderbatches.h">
+      <Filter>Source Files\morgana\fmk\renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderers\renderer.h">
+      <Filter>Source Files\morgana\fmk\renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderers\renderers.h">
+      <Filter>Source Files\morgana\fmk\renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\sceneroot.h">
+      <Filter>Source Files\morgana\fmk\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\inputs\input.h">
+      <Filter>Source Files\morgana\fmk\inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\pedia\objpedia.h">
+      <Filter>Source Files\morgana\fmk\pedia</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderpaths\renderpath.h">
+      <Filter>Source Files\morgana\fmk\renderpaths</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderpaths\renderpathforward.h">
+      <Filter>Source Files\morgana\fmk\renderpaths</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\tween\tweenease.h">
+      <Filter>Source Files\morgana\fmk\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\tween\tweenfunc.h">
+      <Filter>Source Files\morgana\fmk\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\shaders\shaderbuilder.h">
+      <Filter>Source Files\morgana\fmk\resources\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\shaders\shaderfile.h">
+      <Filter>Source Files\morgana\fmk\resources\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\shaders\shaderproxy.h">
+      <Filter>Source Files\morgana\fmk\resources\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\materials\material.h">
+      <Filter>Source Files\morgana\fmk\resources\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\materials\materialcomponent.h">
+      <Filter>Source Files\morgana\fmk\resources\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\resourcecontext.h">
+      <Filter>Source Files\morgana\fmk\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\opengl\shaderparser_glsl.h">
+      <Filter>Source Files\morgana\base\devices\display\opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\parsers\bp.h">
+      <Filter>Source Files\morgana\base\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\parsers\cbp.h">
+      <Filter>Source Files\morgana\base\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\parsers\sbp.h">
+      <Filter>Source Files\morgana\base\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\memory\managed\cpumemorypage.h">
+      <Filter>Source Files\morgana\base\memory\managed</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\memory\managed\managedpages.h">
+      <Filter>Source Files\morgana\base\memory\managed</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\memory\managed\memorypage.h">
+      <Filter>Source Files\morgana\base\memory\managed</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\bits.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\named.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\point.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\rect.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\sharedptr.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\smartptr.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\tagged.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\usagearray.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\uuid.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\versioned.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\namedmask.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testapp\testapp.h">
+      <Filter>Source Files\testapp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\standard\camera\fpscamcontroller.h">
+      <Filter>Source Files\morgana\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\standard\objectbuilder.h">
+      <Filter>Source Files\morgana\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\recttransform.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\screen.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\inputeventsmanager.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\inputeventsreceiver.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\parsers\xml\tinyxml2.h">
+      <Filter>Source Files\morgana\base\parsers\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\wndsys\wndsys.h">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\wndsys\widget.h">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\framework.h">
+      <Filter>Source Files\morgana\fmk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\wndsys\window.h">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\wndsys\editbox.h">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\text.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\utils\uniquenamegen.h">
+      <Filter>Source Files\morgana\base\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\utils\base64.h">
+      <Filter>Source Files\morgana\base\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\standard\displayfps.h">
+      <Filter>Source Files\morgana\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\stats\framestats.h">
+      <Filter>Source Files\morgana\base\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\gameobjects\irenderable.h">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\color255.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\color.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\colorhsb.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\cameras\camera.h">
+      <Filter>Source Files\morgana\fmk\scene\cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\meshes\mesh.h">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\meshes\meshcollection.h">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\meshes\meshcomponent.h">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\meshes\meshes.h">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\meshes\meshrenderer.h">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\meshes\primitives.h">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\lights\light.h">
+      <Filter>Source Files\morgana\fmk\scene\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\canvassurface.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\cameras\camerarender.h">
+      <Filter>Source Files\morgana\fmk\scene\cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderers\streamingbuffers.h">
+      <Filter>Source Files\morgana\fmk\renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderers\genericbatch.h">
+      <Filter>Source Files\morgana\fmk\renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\rawdata.h">
+      <Filter>Source Files\morgana\fmk\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\textdata.h">
+      <Filter>Source Files\morgana\fmk\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\fonts\fonts.h">
+      <Filter>Source Files\morgana\fmk\resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\binpacker\GuillotineBinPack.h">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\binpacker\MaxRectsBinPack.h">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\binpacker\ShelfBinPack.h">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\binpacker\SkylineBinPack.h">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\binpacker\binpacker.h">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\binpacker\BinPackerRect.h">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\cameras\camerafrontend.h">
+      <Filter>Source Files\morgana\fmk\scene\cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\cameras\camerabackend.h">
+      <Filter>Source Files\morgana\fmk\scene\cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderpaths\standardcamerabackend.h">
+      <Filter>Source Files\morgana\fmk\renderpaths</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderpaths\shadowmappingbackend.h">
+      <Filter>Source Files\morgana\fmk\renderpaths</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\objectptrref.h">
+      <Filter>Source Files\morgana\base\reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\wndsys\desktop.h">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\wndsys\desktoptheme.h">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\callbacks.h">
+      <Filter>Source Files\morgana\base\reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\properties\properties.h">
+      <Filter>Source Files\morgana\base\reflection\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\properties\objectproperties.h">
+      <Filter>Source Files\morgana\base\reflection\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\properties\propertiesimpl.h">
+      <Filter>Source Files\morgana\base\reflection\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\standard\ui\stdwindow.h">
+      <Filter>Source Files\morgana\standard\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\texttruetype.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\images\stdimages.h">
+      <Filter>Source Files\morgana\fmk\resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\utils\pixelbuffer.h">
+      <Filter>Source Files\morgana\base\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\objects\sprite.h">
+      <Filter>Source Files\morgana\base\devices\display\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\standard\ui\stdtreeview.h">
+      <Filter>Source Files\morgana\standard\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\treeleaf.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\application\meapplication.h">
+      <Filter>Source Files\morgana\fmk\application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\medevices.h">
+      <Filter>Source Files\morgana\base\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\medevice.h">
+      <Filter>Source Files\morgana\base\devices</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\tween\metween.h">
+      <Filter>Source Files\morgana\fmk\tween</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\standard\mestandard.h">
+      <Filter>Source Files\morgana\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\shell\meshell.h">
+      <Filter>Source Files\morgana\fmk\shell</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\mescene.h">
+      <Filter>Source Files\morgana\fmk\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\scene\lights\melights.h">
+      <Filter>Source Files\morgana\fmk\scene\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\meresources.h">
+      <Filter>Source Files\morgana\fmk\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\gameobjects\mescript.h">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\devices\display\medisplay.h">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\mefiles.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\io\meio.h">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\math\memath.h">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\memory\mememory.h">
+      <Filter>Source Files\morgana\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\parsers\meparsers.h">
+      <Filter>Source Files\morgana\base\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\meobject.h">
+      <Filter>Source Files\morgana\base\reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\clock\metimer.h">
+      <Filter>Source Files\morgana\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\clock\meclock.h">
+      <Filter>Source Files\morgana\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\clock\mesystemclock.h">
+      <Filter>Source Files\morgana\base\time</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\mearray.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\medictionary.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\mepool.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\mestring.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\mestringhash.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\metreenode.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\metypes.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\utils\meutils.h">
+      <Filter>Source Files\morgana\base\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\views\meview.h">
+      <Filter>Source Files\morgana\base\views</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\views\mevieww32.h">
+      <Filter>Source Files\morgana\base\views</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\renderpaths\merenderpaths.h">
+      <Filter>Source Files\morgana\fmk\renderpaths</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\parsers\medocument.h">
+      <Filter>Source Files\morgana\base\parsers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\reflection\meclasslib.h">
+      <Filter>Source Files\morgana\base\reflection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\canvas\documentrender.h">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\fonts\fonttruetype.h">
+      <Filter>Source Files\morgana\fmk\resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\utils\enums.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\types\stringbuilder.h">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\models\meshdata.h">
+      <Filter>Source Files\morgana\fmk\resources\models</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\fmk\resources\models\fbxmodel.h">
+      <Filter>Source Files\morgana\fmk\resources\models</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="hits.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\morgana\platform\win32\entry_point.cpp">
+      <Filter>Source Files\morgana\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\paths.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\stream.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\vector2.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\vector3.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\matrix.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\quaternion.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\plane.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\fsa.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\dfs.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\mfs.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\rfs.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\cfs.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\nfs.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\memory\operators.cpp">
+      <Filter>Source Files\morgana\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\memory\memtracker.cpp">
+      <Filter>Source Files\morgana\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\input\inputdevice.cpp">
+      <Filter>Source Files\morgana\base\devices\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\displaydevice.cpp">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\sound\sounddevice.cpp">
+      <Filter>Source Files\morgana\base\devices\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\input\keyboardw32.cpp">
+      <Filter>Source Files\morgana\base\devices\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\input\mousew32.cpp">
+      <Filter>Source Files\morgana\base\devices\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\filestreamw32.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\input\idevw32.cpp">
+      <Filter>Source Files\morgana\base\devices\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\objects\texture.cpp">
+      <Filter>Source Files\morgana\base\devices\display\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\objects\buffer.cpp">
+      <Filter>Source Files\morgana\base\devices\display\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\objects\rendertarget.cpp">
+      <Filter>Source Files\morgana\base\devices\display\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\objects\shaderprogram.cpp">
+      <Filter>Source Files\morgana\base\devices\display\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\pipelinestates.cpp">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\opengl\common_ogl_device.cpp">
+      <Filter>Source Files\morgana\base\devices\display\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\opengl\common_oglw32_device.cpp">
+      <Filter>Source Files\morgana\base\devices\display\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\vertexdef.cpp">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\opengl\displayobjectfactory_ogl.cpp">
+      <Filter>Source Files\morgana\base\devices\display\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\displayobjectfactory.cpp">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\displayobject.cpp">
+      <Filter>Source Files\morgana\base\devices\display</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\fonts\font.cpp">
+      <Filter>Source Files\morgana\fmk\resources\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\fonts\systemfontw32.cpp">
+      <Filter>Source Files\morgana\fmk\resources\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\images\imagefile.cpp">
+      <Filter>Source Files\morgana\fmk\resources\images</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\images\imagedecoder.cpp">
+      <Filter>Source Files\morgana\fmk\resources\images</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\images\decoders\pngdecoder.cpp">
+      <Filter>Source Files\morgana\fmk\resources\images\decoders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\external\lodepng\lodepng.cpp">
+      <Filter>Source Files\morgana\external\lodepng</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\resourcefile.cpp">
+      <Filter>Source Files\morgana\fmk\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\reflection\serializer\serializer_base.cpp">
+      <Filter>Source Files\morgana\base\reflection\serializer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\debug.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\box.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\curve.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\frustum.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\intersection.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\mathutils.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\math\spline.cpp">
+      <Filter>Source Files\morgana\base\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\times\time.cpp">
+      <Filter>Source Files\morgana\fmk\times</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\image.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\renderstocanvas.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\gameobjects\component.cpp">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\gameobjects\gameobject.cpp">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\gameobjects\transform.cpp">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\renderers\renderer.cpp">
+      <Filter>Source Files\morgana\fmk\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\sceneroot.cpp">
+      <Filter>Source Files\morgana\fmk\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\inputs\input.cpp">
+      <Filter>Source Files\morgana\fmk\inputs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\renderpaths\renderpath.cpp">
+      <Filter>Source Files\morgana\fmk\renderpaths</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\renderpaths\renderpathforward.cpp">
+      <Filter>Source Files\morgana\fmk\renderpaths</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\tween\tweenfunc.cpp">
+      <Filter>Source Files\morgana\fmk\tween</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\shaders\shaderbuilder.cpp">
+      <Filter>Source Files\morgana\fmk\resources\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\shaders\shaderfile.cpp">
+      <Filter>Source Files\morgana\fmk\resources\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\shaders\shaderproxy.cpp">
+      <Filter>Source Files\morgana\fmk\resources\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\materials\material.cpp">
+      <Filter>Source Files\morgana\fmk\resources\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\materials\materialcomponent.cpp">
+      <Filter>Source Files\morgana\fmk\resources\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\resourcecontext.cpp">
+      <Filter>Source Files\morgana\fmk\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\display\opengl\shaderparser_glsl.cpp">
+      <Filter>Source Files\morgana\base\devices\display\opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\parsers\bp.cpp">
+      <Filter>Source Files\morgana\base\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\parsers\cbp.cpp">
+      <Filter>Source Files\morgana\base\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\parsers\sbp.cpp">
+      <Filter>Source Files\morgana\base\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\memory\managed\memorypage.cpp">
+      <Filter>Source Files\morgana\base\memory\managed</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\types\rect.cpp">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\types\namedmask.cpp">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testapp\testapp.cpp">
+      <Filter>Source Files\testapp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\standard\camera\fpscamcontroller.cpp">
+      <Filter>Source Files\morgana\standard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\recttransform.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\screen.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\inputeventsmanager.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\inputeventsreceiver.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\parsers\xml\tinyxml2.cpp">
+      <Filter>Source Files\morgana\base\parsers\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\wndsys\widget.cpp">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\wndsys\window.cpp">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\wndsys\editbox.cpp">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\text.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\utils\base64.cpp">
+      <Filter>Source Files\morgana\base\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\standard\displayfps.cpp">
+      <Filter>Source Files\morgana\standard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\stats\framestats.cpp">
+      <Filter>Source Files\morgana\base\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\gameobjects\irenderable.cpp">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\types\color255.cpp">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\types\color.cpp">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\types\colorhsb.cpp">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\cameras\camera.cpp">
+      <Filter>Source Files\morgana\fmk\scene\cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\meshes\meshcollection.cpp">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\meshes\meshcomponent.cpp">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\meshes\meshrenderer.cpp">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\meshes\primitives.cpp">
+      <Filter>Source Files\morgana\fmk\scene\meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\lights\light.cpp">
+      <Filter>Source Files\morgana\fmk\scene\lights</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\cameras\camerarender.cpp">
+      <Filter>Source Files\morgana\fmk\scene\cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\canvassurface.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\renderers\streamingbuffers.cpp">
+      <Filter>Source Files\morgana\fmk\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\rawdata.cpp">
+      <Filter>Source Files\morgana\fmk\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\textdata.cpp">
+      <Filter>Source Files\morgana\fmk\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\binpacker\GuillotineBinPack.cpp">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\binpacker\MaxRectsBinPack.cpp">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\binpacker\ShelfBinPack.cpp">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\binpacker\SkylineBinPack.cpp">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\binpacker\BinPackerRect.cpp">
+      <Filter>Source Files\morgana\base\binpacker</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\cameras\camerafrontend.cpp">
+      <Filter>Source Files\morgana\fmk\scene\cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\scene\cameras\camerabackend.cpp">
+      <Filter>Source Files\morgana\fmk\scene\cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\renderpaths\standardcamerabackend.cpp">
+      <Filter>Source Files\morgana\fmk\renderpaths</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\renderpaths\shadowmappingbackend.cpp">
+      <Filter>Source Files\morgana\fmk\renderpaths</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\wndsys\desktop.cpp">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\wndsys\desktoptheme.cpp">
+      <Filter>Source Files\morgana\fmk\wndsys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\reflection\properties\properties.cpp">
+      <Filter>Source Files\morgana\base\reflection\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\reflection\properties\objectproperties.cpp">
+      <Filter>Source Files\morgana\base\reflection\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\reflection\properties\propertiesimpl.cpp">
+      <Filter>Source Files\morgana\base\reflection\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\standard\ui\stdwindow.cpp">
+      <Filter>Source Files\morgana\standard\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\texttruetype.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\standard\ui\stdtreeview.cpp">
+      <Filter>Source Files\morgana\standard\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\types\treeleaf.cpp">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\application\meapplication.cpp">
+      <Filter>Source Files\morgana\fmk\application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\medevices.cpp">
+      <Filter>Source Files\morgana\base\devices</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\devices\medevice.cpp">
+      <Filter>Source Files\morgana\base\devices</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\tween\metween.cpp">
+      <Filter>Source Files\morgana\fmk\tween</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\shell\meshell.cpp">
+      <Filter>Source Files\morgana\fmk\shell</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\gameobjects\mescript.cpp">
+      <Filter>Source Files\morgana\fmk\gameobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\io\mefiles.cpp">
+      <Filter>Source Files\morgana\base\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\reflection\meobject.cpp">
+      <Filter>Source Files\morgana\base\reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\clock\metimer.cpp">
+      <Filter>Source Files\morgana\base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\clock\mesystemclock.cpp">
+      <Filter>Source Files\morgana\base\time</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\types\mestring.cpp">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\types\mestringhash.cpp">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\views\meview.cpp">
+      <Filter>Source Files\morgana\base\views</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\views\mevieww32.cpp">
+      <Filter>Source Files\morgana\base\views</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\parsers\medocument.cpp">
+      <Filter>Source Files\morgana\base\parsers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\reflection\meclasslib.cpp">
+      <Filter>Source Files\morgana\base\reflection</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\canvas\documentrender.cpp">
+      <Filter>Source Files\morgana\fmk\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\fonts\fonttruetype.cpp">
+      <Filter>Source Files\morgana\fmk\resources\fonts</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\types\stringbuilder.cpp">
+      <Filter>Source Files\morgana\base\types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\fmk\resources\models\fbxmodel.cpp">
+      <Filter>Source Files\morgana\fmk\resources\models</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\morgana.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

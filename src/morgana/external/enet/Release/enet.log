@@ -1,0 +1,38 @@
+﻿Build started 11/3/2016 12:05:15 PM.
+     1>Project "E:\work\hits\src\morgana\external\enet\enet.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Iinclude /Zi /nologo /W3 /WX- /O2 /Oy- /D WIN32 /D NDEBUG /D _LIB /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt host.c list.c callbacks.c compress.c packet.c peer.c protocol.c unix.c win32.c
+         host.c
+         list.c
+         callbacks.c
+         compress.c
+         packet.c
+         peer.c
+         protocol.c
+         unix.c
+         win32.c
+     1>win32.c(67): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(2238) : see declaration of 'gethostbyname'
+     1>win32.c(71): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(1850) : see declaration of 'inet_addr'
+     1>win32.c(86): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(1868) : see declaration of 'inet_ntoa'
+     1>win32.c(107): warning C4996: 'gethostbyaddr': Use getnameinfo() or GetNameInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(2216) : see declaration of 'gethostbyaddr'
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:".\Release\enet.lib" /NOLOGO .\Release\host.obj
+         .\Release\list.obj
+         .\Release\callbacks.obj
+         .\Release\compress.obj
+         .\Release\packet.obj
+         .\Release\peer.obj
+         .\Release\protocol.obj
+         .\Release\unix.obj
+         .\Release\win32.obj
+         enet.vcxproj -> E:\work\hits\src\morgana\external\enet\.\Release\enet.lib
+     1>Done Building Project "E:\work\hits\src\morgana\external\enet\enet.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.22
