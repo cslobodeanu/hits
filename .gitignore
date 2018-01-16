@@ -10,3 +10,4 @@ src/morgana/external/bullet/bin
 src/morgana/external/bullet/build3
 src\morgana\external\bullet\build3\vs2010\obj
 src/morgana/external/freetype/objs
+src/morgana/external/freetype/lib
