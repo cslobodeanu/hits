@@ -2,6 +2,10 @@ hits.sdf
 hits.VC.db
 hits.suo
 hits.v12.suo
-*/**/Debug
-*/**/Release
+Debug
+Release
 .vs
+*.idb
+src/morgana/external/bullet/bin
+src/morgana/external/bullet/build3
+src\morgana\external\bullet\build3\vs2010\obj
