@@ -12,6 +12,7 @@ namespace MorganaEngine
 		namespace IO
 		{
 			class GenericFileSystem;
+			typedef Array<byte> RawBuffer;
 			class Stream
 			{
 			protected:
