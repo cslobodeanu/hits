@@ -3,6 +3,7 @@
 
 #include "macros.h"
 #include "localmemoryblock.h"
+#include "heapmemoryblock.h"
 #include "memtracker.h"
 #include "managed/memorypage.h"
 #include "managed/managedpages.h"
