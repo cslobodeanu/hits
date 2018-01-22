@@ -5,7 +5,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerDebuggerType>NativeOnly</LocalDebuggerDebuggerType>
-    <LocalDebuggerCommandArguments>TestApplication</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>MEApplication</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerEnvironment>PATH=src\morgana\external\fbxsdk\lib\x86\_debug\
 $(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>

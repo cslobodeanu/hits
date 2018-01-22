@@ -511,3 +511,22 @@ GameObject*	GameObject::_systemRoot()
 
 	return __systemRoot;
 }
+
+MEScript* GameObject::AddScript(const char* name)
+{
+	MEScript* c = __dynamic_cast<MEScript>(MEObject::Instantiate(name));
+
+	if (c == null) return null;
+
+	c->gameObject = this;
+
+	AssignStandardComponent(c);
+
+	scripts.Add((MEScript*)c);
+
+	OnComponentAdded(c);
+
+	c->Awake();
+
+	return c;
+}

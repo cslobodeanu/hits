@@ -49,6 +49,8 @@ namespace MorganaEngine
 				template<class T>
 				T*					AddComponent();
 
+				MEScript*			AddScript(const char* name);
+
 				template<class T>
 				void				RemoveComponent();
 

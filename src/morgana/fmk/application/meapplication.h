@@ -26,6 +26,9 @@ namespace MorganaEngine
 			void								CallCreateGameObject(GameObject* obj);
 			void								CallDeleteGameObject(GameObject* obj);
 
+
+			void								LoadConfiguration();
+
 			MEApplication();
 
 			public:

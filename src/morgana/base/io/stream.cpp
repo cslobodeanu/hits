@@ -284,3 +284,27 @@ bool Stream::WriteStringBuffer(const char* str)
 	return true;
 }
 
+void Stream::ToByteBuffer(LocalMemoryBlock& lmb)
+{
+	const int count = Size();
+	if (count == 0) return;
+	if (Open(OpenMode::READ) == false) return;
+
+	ReadBuffer(lmb.Realloc(count), count);
+
+	Close();
+}
+
+void Stream::ToNullTerminatedString(LocalMemoryBlock& lmb)
+{
+	const int count = Size();
+	if (count == 0) return;
+	if (Open(OpenMode::READ) == false) return;
+
+	ReadBuffer(lmb.Realloc(count + 1), count);
+
+	lmb[count] = 0;
+
+	Close();
+}
+

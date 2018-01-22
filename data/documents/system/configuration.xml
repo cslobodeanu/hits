@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <configuration name = "Default Configuration">
-<startupclasses>
-	<classname="DisplayFPS" canvas="yes" />
-</startupclasses>
 
-</material>
+<startupscripts>
+	<script name="DisplayFPS" canvas="true" />
+</startupscripts>
+
+
+</configuration>

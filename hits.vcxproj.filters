@@ -680,9 +680,6 @@
     <ClInclude Include="src\morgana\fmk\resources\images\stdimages.h">
       <Filter>Source Files\morgana\fmk\resources\images</Filter>
     </ClInclude>
-    <ClInclude Include="src\morgana\base\utils\pixelbuffer.h">
-      <Filter>Source Files\morgana\base\utils</Filter>
-    </ClInclude>
     <ClInclude Include="src\morgana\base\devices\display\objects\sprite.h">
       <Filter>Source Files\morgana\base\devices\display\objects</Filter>
     </ClInclude>
@@ -811,6 +808,12 @@
     </ClInclude>
     <ClInclude Include="src\morgana\fmk\resources\models\fbxmodel.h">
       <Filter>Source Files\morgana\fmk\resources\models</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\utils\rectanglebuffer.h">
+      <Filter>Source Files\morgana\base\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\memory\heapmemoryblock.h">
+      <Filter>Source Files\morgana\base\memory</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1241,6 +1244,9 @@
     </ClCompile>
     <ClCompile Include="src\morgana\fmk\resources\models\fbxmodel.cpp">
       <Filter>Source Files\morgana\fmk\resources\models</Filter>
+    </ClCompile>
+    <ClCompile Include="src\morgana\base\memory\heapmemoryblock.cpp">
+      <Filter>Source Files\morgana\base\memory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

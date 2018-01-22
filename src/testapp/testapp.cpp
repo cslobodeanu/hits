@@ -22,20 +22,6 @@ void TestApplication::Initialize()
 {
 	super::Initialize();
 
-	GameObject* go = ObjectBuilder::CreateCamera("MainCamera");
-	Camera* cam = go->GetComponent<Camera>();
-
-	cam->projectionType = Camera::Perspective;
-	cam->farPlane = 1500.0f;
-	cam->nearPlane = 0.1f;
-	cam->transform->position = Vector3(0, 10, 60);
-	cam->backgroundColor = Color::dark_slate_gray;
-
-	GameObject* canvas = ObjectBuilder::CreateCanvas();
-
-	Desktop* d = GameObject::InitWithComponent<Desktop>();
-	d->gameObject->SetParent(canvas);
-
 	ObjectBuilder::CreateFPSCameraController();
 
 	GameObject* obj = ObjectBuilder::CreateCanvasObject(Desktop::main, "DisplayFPS");

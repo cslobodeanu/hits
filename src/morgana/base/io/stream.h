@@ -3,12 +3,14 @@
 
 #include <stdio.h>
 #include "../compatibility/compatibility.h"
+#include "../memory/localmemoryblock.h"
 #include "metypes.h"
 
 namespace MorganaEngine
 {
 	namespace Base
 	{
+		using namespace Memory;
 		namespace IO
 		{
 			class GenericFileSystem;
@@ -100,6 +102,9 @@ namespace MorganaEngine
 				virtual int32 Size() = 0;
 
 				bool	IsOpened() { return isOpened; }
+
+				void ToByteBuffer(LocalMemoryBlock& lmb);
+				void ToNullTerminatedString(LocalMemoryBlock& lmb);
 			};
 
 			typedef Array<Stream*> StreamList;

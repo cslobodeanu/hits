@@ -68,6 +68,7 @@ void ShadowMappingBackend::Start()
 
 void ShadowMappingBackend::OnPreFlush(const CameraFrontend::RenderableFrame_t& frame)
 {
+	if (frame.globalDirectionalLight == null) return;
 	Vector3 lightDir = frame.globalDirectionalLight->transform->rotation->Forward();
 	camera->transform->rotation = frame.globalDirectionalLight->transform->rotation;
 	camera->transform->position = -camera->transform->rotation->Forward() * 1200.0f;// camera->farPlane * 0.5f;

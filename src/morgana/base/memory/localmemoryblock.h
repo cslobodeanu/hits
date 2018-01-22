@@ -1,6 +1,8 @@
 #ifndef __MORGANA_BASE_MEMORY_LOCAL_MEMORY_BLOCK_H__
 #define __MORGANA_BASE_MEMORY_LOCAL_MEMORY_BLOCK_H__
 
+#include <string.h>
+
 namespace MorganaEngine
 {
 	namespace Base
@@ -13,6 +15,12 @@ namespace MorganaEngine
 			public:
 
 				int		size;
+
+				LocalMemoryBlock()
+				{
+					buffer = NULL;
+					size = 0;
+				}
 
 				LocalMemoryBlock(const int sz, const int fillValue = -1)
 				{
@@ -27,13 +35,15 @@ namespace MorganaEngine
 					delete [] buffer;
 				}
 
-				void Realloc(const int sz)
+				char* Realloc(const int sz)
 				{
 					if (buffer != null)
 						delete[] buffer;
 
 					buffer = new char[sz];
 					size = sz;
+
+					return buffer;
 				}
 
 				inline operator char* ()
