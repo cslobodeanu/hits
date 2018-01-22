@@ -16,8 +16,8 @@ namespace MorganaEngine
 
 				LocalMemoryBlock(const int sz, const int fillValue = -1)
 				{
-					buffer = new char[sz];
-					size = sz;
+					buffer = NULL;
+					Realloc(sz);
 					if (fillValue >= 0)
 						memset(buffer, sz, (size_t)fillValue);
 				}
@@ -25,6 +25,15 @@ namespace MorganaEngine
 				~LocalMemoryBlock()
 				{
 					delete [] buffer;
+				}
+
+				void Realloc(const int sz)
+				{
+					if (buffer != null)
+						delete[] buffer;
+
+					buffer = new char[sz];
+					size = sz;
 				}
 
 				inline operator char* ()

@@ -2,6 +2,7 @@
 #define __MORGANA_BASE_MEMORY_HEAP_MEMORY_BLOCK_H__
 
 #include <string.h>
+#include "debug.h"
 
 namespace MorganaEngine
 {
@@ -13,20 +14,26 @@ namespace MorganaEngine
 			{
 				static char*	buffer;
 				static int		allocatedSize;
+				static int		refCount;
 			public:
 
 				int		size;
 
 				HeapMemoryBlock(const int sz, const int fillValue = -1)
 				{
+					ASSERT(refCount == 0);
 					if (sz > allocatedSize)
 					{
+						if (buffer != NULL)
+							delete[] buffer;
 						buffer = new char[sz];
 						allocatedSize = sz;
 					}
 					size = sz;
 					if (fillValue >= 0)
 						memset(buffer, sz, (size_t)fillValue);
+
+					refCount++;
 				}
 
 				static void Release()
@@ -41,6 +48,7 @@ namespace MorganaEngine
 
 				~HeapMemoryBlock()
 				{
+					refCount--;
 				}
 
 				inline operator char* ()
