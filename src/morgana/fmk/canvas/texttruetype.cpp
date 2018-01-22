@@ -17,10 +17,6 @@ TextTrueType::TextTrueType()
 	fontItalic = false;
 	font = NULL;
 
-	fontGlow = false;
-	fontGlowColor = Color::black;
-	fontGlowOffset = Vector2::Zero;
-
 	lines.SetNullOnAlloc();
 
 	mustUpdateQuads = true;
@@ -154,9 +150,6 @@ void TextTrueType::DoAddProperties()
 	__add_property1(verticalAlignment);
 
 	__add_property1(font);
-	__add_property1(fontGlow);
-	__add_property1(fontGlowColor);
-	__add_property1(fontGlowOffset);
 }
 
 void TextTrueType::Update()
@@ -274,34 +267,6 @@ void TextTrueType::ComputeLines()
 			texR.Normalize((float)gi->texture->GetBounds().width);
 
 			const float kerning = font->GetKerning(gi, prev);
-
-			if (fontGlow)
-			{
-				currentLine->quads.IncreaseSize(1);
-
-				const float scaleQuad = 2.3f;
-
-				QuadInfo_t& q = currentLine->quads.Last();
-				q.origin = pen + Vector2((float)gi->offsetLeft + kerning, -(float)gi->offsetTop);
-				q.width = gi->rect.width * scaleQuad;
-				q.height = gi->rect.height * scaleQuad;
-
-				Vector2 extraOfs = (Vector2((float)q.width, (float)q.height) - Vector2((float)gi->rect.width, (float)gi->rect.height)) * 0.5f;
-				if (gi->transposed)
-				{
-					const float tmp = extraOfs.x;
-					extraOfs.x = extraOfs.y;
-					extraOfs.y = tmp;
-				}
-
-				q.origin -= extraOfs;
-				q.origin += Vector2::Up * (float)fontSize * 0.1f + fontGlowOffset;
-
-				q.texCoord = texR;
-				q.transposed = gi->transposed;
-				q.color = fontGlowColor->ToColor255();
-				q.color2 = Color255(255, 0, 0, 0);
-			}
 
 			currentLine->quads.IncreaseSize(1);
 

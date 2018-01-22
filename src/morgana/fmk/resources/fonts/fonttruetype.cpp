@@ -24,7 +24,7 @@ FontTrueType::TexturePack_t::TexturePack_t(int size)
 
 	texture = new Texture();
 	Texture::CreateParams_t texParams(size, size);
-	texParams.format = PixelFormat::FormatGreyAlpha;
+	texParams.format = PixelFormat::FormatGrey;
 	texParams.filtering = Filtering::Bilinear;
 	implementation<DisplayObjectFactory>()->Create(texture, &texParams);
 }
@@ -161,7 +161,7 @@ FontTrueType::GlyphInfo_t* FontTrueType::RequestGlyph(const int character, const
 					}
 					else
 					{
-						const int border = 2;
+						const int border = 0.0f;
 						const int allocW = slot->bitmap.pitch + 2 * border;
 						const int allocH = slot->bitmap.rows + 2 * border;
 
@@ -172,31 +172,18 @@ FontTrueType::GlyphInfo_t* FontTrueType::RequestGlyph(const int character, const
 
 						gi->rect.Inflate(-2 * border, -2 * border);
 
-						GrayscaleAlphaBuffer b;
+						GrayscaleBuffer b;
 						if (gi->transposed)
 						{
 							b.Alloc(gi->rect.height, gi->rect.width);
-							b.BlitChannel(1, slot->bitmap.buffer, 0, 1);
+							b.BlitChannel(0, slot->bitmap.buffer, 0, 1);
 							b.Transpose();
 						}
 						else
 						{
 							b.Alloc(gi->rect.width, gi->rect.height);
-							b.BlitChannel(1, slot->bitmap.buffer, 0, 1);
+							b.BlitChannel(0, slot->bitmap.buffer, 0, 1);
 						}
-
-						GrayscaleBuffer tmp(gi->rect.width, gi->rect.height);
-						tmp.BlitChannel(0, b, 1, 2);
-
-						const float glowScale = 2.0f;
-						GrayscaleBuffer tmp2((int)((float)gi->rect.width / glowScale), (int)((float)gi->rect.height / glowScale));
-						tmp.Resample(tmp2);
-
-						tmp.Clear();
-						tmp.Blit(tmp2, (tmp._width() - tmp2._width()) / 2, (tmp._height() - tmp2._height()) / 2);
-						tmp.Blur((float)(gi->rect.width + gi->rect.height) * 0.1f);
-
-						b.BlitChannel(0, tmp, 0, 1);
 
 						implementation<DisplayObjectFactory>()->UpdateSubresource(gi->texture, gi->rect, 0, (byte*)b);
 					}
@@ -344,19 +331,19 @@ SpriteInfo_t* FontTrueType::RequestSprite(const SpecialSprites ss, const int siz
 
 	AllocBlock(size, size, &si->texture, &si->rect);
 
-	PixelBuffer<2> pb;
+	PixelBuffer<1> pb;
 
 	int shrinkCoords = 0;
 	
 	if (ss == SpecialSprites::White)
 	{
-		pb = StandardImage::Fill<2>(size, Color255::white);
+		pb = StandardImage::Fill<1>(size, Color255::white);
 		shrinkCoords = size / 4;
 	}
 	else
 	if (ss == SpecialSprites::Blob)
 	{
-		pb = StandardImage::Disc<2>(size, Color255::white, Color255(255, 255, 255, 0), 0.8f);
+		pb = StandardImage::Disc<1>(size, Color255::white, Color255(0, 0, 0, 0), 0.8f);
 		si->borderLeft = size / 2;
 		si->borderRight = size / 2;
 		si->borderTop = size / 2;

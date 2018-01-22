@@ -71,8 +71,6 @@ void DisplayFPS::Start()
 		caption[i]->color = Color::black;
 		caption[i]->overflow = true;
 		caption[i]->verticalAlignment = TextVerticalAlignment::AlignCenter;
-		caption[i]->fontGlow = true;
-		caption[i]->fontGlowColor = Color(0.0f, 0.0f, 0.0f, 0.55f);
 
 		RectTransform* rt = obj->GetComponent<RectTransform>();
 		rt->rect = Rectf((float)i * cw + borderX, 0.0f, cw - 5.0f, h);

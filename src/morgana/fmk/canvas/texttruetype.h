@@ -39,11 +39,6 @@ namespace MorganaEngine
 				_property<float>	lineSpacing;
 				_property<bool>		overflow;
 				_property<bool>		fontItalic;
-				_property<bool>		fontGlow;
-				_property<Color>	fontGlowColor;
-
-				_property<Vector2>	fontGlowOffset;
-
 				_property<int>		alignment;
 				_property<int>		verticalAlignment;
 
