@@ -1,5 +1,5 @@
-#ifndef __MORGANA_BASE_UTILS_PIXEL_BUFFER_H__
-#define __MORGANA_BASE_UTILS_PIXEL_BUFFER_H__
+#ifndef __MORGANA_BASE_UTILS_RECTANGLE_BUFFER_H__
+#define __MORGANA_BASE_UTILS_RECTANGLE_BUFFER_H__
 
 namespace MorganaEngine
 {
@@ -8,7 +8,7 @@ namespace MorganaEngine
 		namespace Utils
 		{
 			template<int stride>
-			class PixelBuffer
+			class RectangleBuffer
 			{
 				Array<byte> pixels;
 				int width, height;
@@ -16,17 +16,17 @@ namespace MorganaEngine
 				byte tmp2[stride];
 				byte tmp3[stride];
 			public:
-				PixelBuffer()
+				RectangleBuffer()
 				{
 					Alloc(0, 0);
 				}
 
-				PixelBuffer(const int width, const int height, const byte* src = NULL)
+				RectangleBuffer(const int width, const int height, const byte* src = NULL)
 				{
 					Alloc(width, height, src);
 				}
 
-				PixelBuffer(const PixelBuffer& other)
+				RectangleBuffer(const RectangleBuffer& other)
 				{
 					Alloc(other.width, other.height, (byte*)other);
 				}
@@ -181,7 +181,7 @@ namespace MorganaEngine
 					}
 				}
 
-				const void Resample(PixelBuffer& outBuffer)
+				const void Resample(RectangleBuffer& outBuffer)
 				{
 					Resample((byte*)outBuffer, outBuffer.width, outBuffer.height);
 				}
@@ -200,7 +200,7 @@ namespace MorganaEngine
 					memset(pixels.ptr(), val, size());
 				}
 
-				void Blit(const PixelBuffer src, const int ofsx, const int ofsy)
+				void Blit(const RectangleBuffer src, const int ofsx, const int ofsy)
 				{
 					const int lw = Mathf::Min(width - ofsx, src.width) * stride;
 
@@ -212,7 +212,7 @@ namespace MorganaEngine
 					}
 				}
 
-				void Blit(const PixelBuffer src, const int srcX, const int srcY, const int srcW, const int srcH, const int ofsx, const int ofsy)
+				void Blit(const RectangleBuffer src, const int srcX, const int srcY, const int srcW, const int srcH, const int ofsx, const int ofsy)
 				{
 					const int lw = Mathf::Min(width - ofsx, srcW) * stride;
 
@@ -249,10 +249,10 @@ namespace MorganaEngine
 				}
 			};
 
-			typedef PixelBuffer<1>	GrayscaleBuffer;
-			typedef PixelBuffer<2>	GrayscaleAlphaBuffer;
-			typedef PixelBuffer<3>	RGBBuffer;
-			typedef PixelBuffer<4>	RGBABuffer;
+			typedef RectangleBuffer<1>	GrayscaleBuffer;
+			typedef RectangleBuffer<2>	GrayscaleAlphaBuffer;
+			typedef RectangleBuffer<3>	RGBBuffer;
+			typedef RectangleBuffer<4>	RGBABuffer;
 		}
 	}
 }

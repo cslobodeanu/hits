@@ -331,7 +331,7 @@ SpriteInfo_t* FontTrueType::RequestSprite(const SpecialSprites ss, const int siz
 
 	AllocBlock(size, size, &si->texture, &si->rect);
 
-	PixelBuffer<1> pb;
+	RectangleBuffer<1> pb;
 
 	int shrinkCoords = 0;
 	

@@ -3,7 +3,7 @@
 
 #include "uniquenamegen.h"
 #include "base64.h"
-#include "pixelbuffer.h"
+#include "rectanglebuffer.h"
 
 using namespace MorganaEngine::Base::Utils;
 

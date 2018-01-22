@@ -16,9 +16,9 @@ namespace MorganaEngine
 				{
 				public:
 					template<int stride>
-					static PixelBuffer<stride> Fill(const int width, const int height, const Color255& fillColor)
+					static RectangleBuffer<stride> Fill(const int width, const int height, const Color255& fillColor)
 					{
-						PixelBuffer<stride> pb(width, height);
+						RectangleBuffer<stride> pb(width, height);
 
 						if (stride == 1)
 							memset(pb, fillColor.r, pb.size());
@@ -42,15 +42,15 @@ namespace MorganaEngine
 					}
 
 					template<int stride>
-					static PixelBuffer<stride> Fill(const int size, const Color255& fillColor)
+					static RectangleBuffer<stride> Fill(const int size, const Color255& fillColor)
 					{
 						return Fill<stride>(size, size, fillColor);
 					}
 
 					template<int stride>
-					static PixelBuffer<stride> VerticalGradient(const int width, const int height, const Color255& fillColor1 = Color::white, const Color255& fillColor2 = Color::black, const float _pow = 1.0f)
+					static RectangleBuffer<stride> VerticalGradient(const int width, const int height, const Color255& fillColor1 = Color::white, const Color255& fillColor2 = Color::black, const float _pow = 1.0f)
 					{
-						PixelBuffer<stride> pb(width, height);
+						RectangleBuffer<stride> pb(width, height);
 
 						for (int y = 0; y < height; y++)
 						{
@@ -68,9 +68,9 @@ namespace MorganaEngine
 					}
 
 					template<int stride>
-					static PixelBuffer<stride> HorizontalGradient(const int width, const int height, const Color255& fillColor1 = Color::white, const Color255& fillColor2 = Color::black, const float _pow = 1.0f)
+					static RectangleBuffer<stride> HorizontalGradient(const int width, const int height, const Color255& fillColor1 = Color::white, const Color255& fillColor2 = Color::black, const float _pow = 1.0f)
 					{
-						PixelBuffer<stride> pb(width, height);
+						RectangleBuffer<stride> pb(width, height);
 
 						for (int y = 0; y < height; y++)
 						{
@@ -95,9 +95,9 @@ namespace MorganaEngine
 					}
 
 					template<int stride>
-					static PixelBuffer<stride> Checkered(const int width, const int height, const Color255& fillColor1, const Color255& fillColor2, const int squareSize)
+					static RectangleBuffer<stride> Checkered(const int width, const int height, const Color255& fillColor1, const Color255& fillColor2, const int squareSize)
 					{
-						PixelBuffer<stride> pb(width, height);
+						RectangleBuffer<stride> pb(width, height);
 
 						bool greysq = true;
 						for (int y = 0; y < height; y++)
@@ -116,9 +116,9 @@ namespace MorganaEngine
 					}
 
 					template<int stride>
-					static PixelBuffer<stride> Disc(const int width, const int height, const Color255& fillColor, const Color255& bkgColor, float att = 1.0f)
+					static RectangleBuffer<stride> Disc(const int width, const int height, const Color255& fillColor, const Color255& bkgColor, float att = 1.0f)
 					{
-						PixelBuffer<stride> pb(width, height);
+						RectangleBuffer<stride> pb(width, height);
 
 						const Vector2 center((float)width * 0.5f, (float)height * 0.5f);
 						const float radius = (float)width * 0.5f;
@@ -149,15 +149,15 @@ namespace MorganaEngine
 					}
 
 					template<int stride>
-					static PixelBuffer<stride> Disc(const int size, const Color255& fillColor, const Color255& bkgColor, float att = 1.0f)
+					static RectangleBuffer<stride> Disc(const int size, const Color255& fillColor, const Color255& bkgColor, float att = 1.0f)
 					{
 						return Disc<stride>(size, size, fillColor, bkgColor, att);
 					}
 
 					template<int stride>
-					static PixelBuffer<stride> Circle(const int width, const int height, const Color255& fillColor, const Color255& bkgColor, float thickness = 1.0f, float att = 1.0f)
+					static RectangleBuffer<stride> Circle(const int width, const int height, const Color255& fillColor, const Color255& bkgColor, float thickness = 1.0f, float att = 1.0f)
 					{
-						PixelBuffer<stride> pb(width, height);
+						RectangleBuffer<stride> pb(width, height);
 
 						const float halfThickness = thickness * 0.5f;
 
@@ -182,7 +182,7 @@ namespace MorganaEngine
 					}
 
 					template<int stride>
-					static PixelBuffer<stride> Circle(const int size, const Color255& fillColor, const Color255& bkgColor, float thickness = 1.0f, float att = 1.0f)
+					static RectangleBuffer<stride> Circle(const int size, const Color255& fillColor, const Color255& bkgColor, float thickness = 1.0f, float att = 1.0f)
 					{
 						return Circle<stride>(size, size, fillColor, bkgColor, thickness, att);
 					}
