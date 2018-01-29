@@ -4,6 +4,7 @@
 #include "sbp.h"
 #include "cbp.h"
 #include "medocument.h"
+#include "json11/json11.hpp"
 
 using namespace MorganaEngine::Base::Parsers;
 
