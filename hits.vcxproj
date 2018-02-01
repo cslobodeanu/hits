@@ -130,10 +130,11 @@
     <ClInclude Include="src\morgana\base\memory\managed\memorypage.h" />
     <ClInclude Include="src\morgana\base\parsers\bp.h" />
     <ClInclude Include="src\morgana\base\parsers\cbp.h" />
-    <ClInclude Include="src\morgana\base\parsers\json11\json11.hpp" />
     <ClInclude Include="src\morgana\base\parsers\medocument.h" />
     <ClInclude Include="src\morgana\base\parsers\meparsers.h" />
     <ClInclude Include="src\morgana\base\parsers\sbp.h" />
+    <ClInclude Include="src\morgana\base\parsers\simplejson\src\JSON.h" />
+    <ClInclude Include="src\morgana\base\parsers\simplejson\src\JSONValue.h" />
     <ClInclude Include="src\morgana\base\parsers\xml\tinyxml2.h" />
     <ClInclude Include="src\morgana\base\reflection\callbacks.h" />
     <ClInclude Include="src\morgana\base\reflection\classes_macros.h" />
@@ -333,10 +334,10 @@
     <ClCompile Include="src\morgana\base\memory\managed\memorypage.cpp" />
     <ClCompile Include="src\morgana\base\parsers\bp.cpp" />
     <ClCompile Include="src\morgana\base\parsers\cbp.cpp" />
-    <ClCompile Include="src\morgana\base\parsers\json11\json11.cpp" />
-    <ClCompile Include="src\morgana\base\parsers\json11\test.cpp" />
     <ClCompile Include="src\morgana\base\parsers\medocument.cpp" />
     <ClCompile Include="src\morgana\base\parsers\sbp.cpp" />
+    <ClCompile Include="src\morgana\base\parsers\simplejson\src\JSON.cpp" />
+    <ClCompile Include="src\morgana\base\parsers\simplejson\src\JSONValue.cpp" />
     <ClCompile Include="src\morgana\base\parsers\xml\tinyxml2.cpp" />
     <ClCompile Include="src\morgana\base\reflection\meclasslib.cpp" />
     <ClCompile Include="src\morgana\base\reflection\meobject.cpp" />

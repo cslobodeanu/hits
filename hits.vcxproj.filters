@@ -180,8 +180,8 @@
     <Filter Include="Source Files\morgana\fmk\resources\models">
       <UniqueIdentifier>{b8d9fc78-d6e5-421a-ba23-88db1b5b3354}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\morgana\base\parsers\json11">
-      <UniqueIdentifier>{f98a8c97-26e3-4c67-8e98-46df0ccd3288}</UniqueIdentifier>
+    <Filter Include="Source Files\morgana\base\parsers\simplejson">
+      <UniqueIdentifier>{29bb1a3d-ea9a-453f-a4fd-f9179d5e68be}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -818,8 +818,11 @@
     <ClInclude Include="src\morgana\base\memory\heapmemoryblock.h">
       <Filter>Source Files\morgana\base\memory</Filter>
     </ClInclude>
-    <ClInclude Include="src\morgana\base\parsers\json11\json11.hpp">
-      <Filter>Source Files\morgana\base\parsers\json11</Filter>
+    <ClInclude Include="src\morgana\base\parsers\simplejson\src\JSON.h">
+      <Filter>Source Files\morgana\base\parsers\simplejson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\morgana\base\parsers\simplejson\src\JSONValue.h">
+      <Filter>Source Files\morgana\base\parsers\simplejson</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1254,11 +1257,11 @@
     <ClCompile Include="src\morgana\base\memory\heapmemoryblock.cpp">
       <Filter>Source Files\morgana\base\memory</Filter>
     </ClCompile>
-    <ClCompile Include="src\morgana\base\parsers\json11\json11.cpp">
-      <Filter>Source Files\morgana\base\parsers\json11</Filter>
+    <ClCompile Include="src\morgana\base\parsers\simplejson\src\JSON.cpp">
+      <Filter>Source Files\morgana\base\parsers\simplejson</Filter>
     </ClCompile>
-    <ClCompile Include="src\morgana\base\parsers\json11\test.cpp">
-      <Filter>Source Files\morgana\base\parsers\json11</Filter>
+    <ClCompile Include="src\morgana\base\parsers\simplejson\src\JSONValue.cpp">
+      <Filter>Source Files\morgana\base\parsers\simplejson</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
